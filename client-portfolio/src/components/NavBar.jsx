@@ -42,8 +42,8 @@ const handleClickLink = () => {
                         <Link onClick={() => handleClickLink()} to={`/${item.href}`} key={item.href}>
                             <button key={item.href}
                                 className={classNames(
-                                    item.href === currentActivePage ? 'font-sans text-amber-400 font-extrabold' : ' font-sans font-bold text-gray-300 hover:bg-amber hover:text-white',
-                                    'px-3 py-2 rounded-full text-sm font-medium'
+                                    item.href === currentActivePage ? 'font-sans text-amber-400 font-black text-md' : ' font-sans font-bold text-gray-300 hover:bg-amber hover:text-white',
+                                    'px-3 py-2 rounded-full text-md font-medium'
                                   )}>
                                          {item.name}
                             </button>

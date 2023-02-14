@@ -9,18 +9,18 @@ import { Link } from "react-router-dom";
           
         
           return (
-            <div className="isolate bg-[url('/public/bg-portfolio.png')] bg-no-repeat bg-cover bg-center">
+            <div className="isolate bg-[url('/public/bg-portfolio.png')] bg-no-repeat bg-cover w-screen h-screen bg-center">
               <main>
-                <div className="relative px-6 lg:px-8">
-                  <div className="mx-auto max-w-fit py-28 sm:py-48 lg:py-56">
-                    <div className="text-center">
-                      <p className="font-sans text-7xl font-bold pb-10 tracking-tight text-white sm:text-6xl">
+                <div className="relative px-6 lg:px-8 ">
+                  <div className="mx-auto max-w-fit py-56 sm:py-48 lg:py-40  my-auto ">
+                    <div className="flex flex-col text-center content-center">
+                      <p className="font-sans text-xl font-bold pb-10 tracking-tight text-white md:text-7xl">
                         WELCOME TO MY PORTFOLIO!
                       </p>
-                      <p className="font-sans text-[300px] font-bold tracking-width py-2  text-amber-400 sm:text-6xl">
+                      <p className="font-sans md:text-9xl lg:text-8xl font-extrabold tracking-width py-2  text-amber-400 text-2xl">
                         I AM VIRGINIA JUAREZ
                       </p>
-                      <h4 className="font-sans mt-6 text-4xl  text-white">
+                      <h4 className="font-sans mt-6 md:text-4xl lg:text-6xl text-lg text-white">
                         FULL STACK DEVELOPER
                       </h4>
                       <div className="mt-10 flex items-center justify-center gap-x-6">
