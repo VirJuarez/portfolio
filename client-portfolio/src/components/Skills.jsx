@@ -20,50 +20,86 @@ export default function Skills() {
     ]
 
     let others=[
-        {name:"Github",src:""},
-        {name:"Visual Code Studio",src:""},
-        {name:"Recharts", src:""},
-        {name:"Agile Metodology",src:""},
+        {name:"GitHub",src:"data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHg9IjBweCIgeT0iMHB4Igp3aWR0aD0iNjQiIGhlaWdodD0iNjQiCnZpZXdCb3g9IjAgMCA2NCA2NCIKc3R5bGU9ImZpbGw6IzAwMDAwMDsiPgo8cGF0aCBkPSJNMzIgNkMxNy42NDEgNiA2IDE3LjY0MSA2IDMyYzAgMTIuMjc3IDguNTEyIDIyLjU2IDE5Ljk1NSAyNS4yODYtLjU5Mi0uMTQxLTEuMTc5LS4yOTktMS43NTUtLjQ3OVY1MC44NWMwIDAtLjk3NS4zMjUtMi4yNzUuMzI1LTMuNjM3IDAtNS4xNDgtMy4yNDUtNS41MjUtNC44NzUtLjIyOS0uOTkzLS44MjctMS45MzQtMS40NjktMi41MDktLjc2Ny0uNjg0LTEuMTI2LS42ODYtMS4xMzEtLjkyLS4wMS0uNDkxLjY1OC0uNDcxLjk3NS0uNDcxIDEuNjI1IDAgMi44NTcgMS43MjkgMy40MjkgMi42MjMgMS40MTcgMi4yMDcgMi45MzggMi41NzcgMy43MjEgMi41NzcuOTc1IDAgMS44MTctLjE0NiAyLjM5Ny0uNDI2LjI2OC0xLjg4OCAxLjEwOC0zLjU3IDIuNDc4LTQuNzc0LTYuMDk3LTEuMjE5LTEwLjQtNC43MTYtMTAuNC0xMC40IDAtMi45MjggMS4xNzUtNS42MTkgMy4xMzMtNy43OTJDMTkuMzMzIDIzLjY0MSAxOSAyMi40OTQgMTkgMjAuNjI1YzAtMS4yMzUuMDg2LTIuNzUxLjY1LTQuMjI1IDAgMCAzLjcwOC4wMjYgNy4yMDUgMy4zMzhDMjguNDY5IDE5LjI2OCAzMC4xOTYgMTkgMzIgMTlzMy41MzEuMjY4IDUuMTQ1LjczOGMzLjQ5Ny0zLjMxMiA3LjIwNS0zLjMzOCA3LjIwNS0zLjMzOC41NjcgMS40NzQuNjUgMi45OS42NSA0LjIyNSAwIDIuMDE1LS4yNjggMy4xOS0uNDMyIDMuNjk3QzQ2LjQ2NiAyNi40NzUgNDcuNiAyOS4xMjQgNDcuNiAzMmMwIDUuNjg0LTQuMzAzIDkuMTgxLTEwLjQgMTAuNCAxLjYyOCAxLjQzIDIuNiAzLjUxMyAyLjYgNS44NXY4LjU1N2MtLjU3Ni4xODEtMS4xNjIuMzM4LTEuNzU1LjQ3OUM0OS40ODggNTQuNTYgNTggNDQuMjc3IDU4IDMyIDU4IDE3LjY0MSA0Ni4zNTkgNiAzMiA2ek0zMy44MTMgNTcuOTNDMzMuMjE0IDU3Ljk3MiAzMi42MSA1OCAzMiA1OCAzMi42MSA1OCAzMy4yMTMgNTcuOTcxIDMzLjgxMyA1Ny45M3pNMzcuNzg2IDU3LjM0NmMtMS4xNjQuMjY1LTIuMzU3LjQ1MS0zLjU3NS41NTRDMzUuNDI5IDU3Ljc5NyAzNi42MjIgNTcuNjEgMzcuNzg2IDU3LjM0NnpNMzIgNThjLS42MSAwLTEuMjE0LS4wMjgtMS44MTMtLjA3QzMwLjc4NyA1Ny45NzEgMzEuMzkgNTggMzIgNTh6TTI5Ljc4OCA1Ny45Yy0xLjIxNy0uMTAzLTIuNDExLS4yODktMy41NzQtLjU1NEMyNy4zNzggNTcuNjEgMjguNTcxIDU3Ljc5NyAyOS43ODggNTcuOXoiPjwvcGF0aD4KPC9zdmc+"},
+        {name:"Visual Studio Code",src:"data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHg9IjBweCIgeT0iMHB4Igp3aWR0aD0iNDgiIGhlaWdodD0iNDgiCnZpZXdCb3g9IjAgMCA0OCA0OCIKc3R5bGU9ImZpbGw6IzAwMDAwMDsiPgo8cGF0aCBmaWxsPSIjMjliNmY2IiBkPSJNNDQsMTEuMTF2MjUuNzhjMCwxLjI3LTAuNzksMi40LTEuOTgsMi44MmwtOC44Miw0LjE0TDM0LDMzVjE1TDMzLjIsNC4xNWw4LjgyLDQuMTQgQzQzLjIxLDguNzEsNDQsOS44NCw0NCwxMS4xMXoiPjwvcGF0aD48cGF0aCBmaWxsPSIjMDI3N2JkIiBkPSJNOSwzMy44OTZMMzQsMTVWNS4zNTNjMC0xLjE5OC0xLjQ4Mi0xLjc1OC0yLjI3NS0wLjg2TDQuNjU4LDI5LjIzOSBjLTAuOSwwLjgzLTAuODQ5LDIuMjY3LDAuMTA3LDMuMDMyYzAsMCwxLjMyNCwxLjIzMiwxLjgwMywxLjU3NEM3LjMwNCwzNC4zNyw4LjI3MSwzNC40Myw5LDMzLjg5NnoiPjwvcGF0aD48cGF0aCBmaWxsPSIjMDI4OGQxIiBkPSJNOSwxNC4xMDRMMzQsMzN2OS42NDdjMCwxLjE5OC0xLjQ4MiwxLjc1OC0yLjI3NSwwLjg2TDQuNjU4LDE4Ljc2MSBjLTAuOS0wLjgzLTAuODQ5LTIuMjY3LDAuMTA3LTMuMDMyYzAsMCwxLjMyNC0xLjIzMiwxLjgwMy0xLjU3NEM3LjMwNCwxMy42Myw4LjI3MSwxMy41Nyw5LDE0LjEwNHoiPjwvcGF0aD4KPC9zdmc+"},
+        {name:"Recharts", src:"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIWXMAAAsTAAALEwEAmpwYAAAB8ElEQVR4nO2YwWpTQRSGP0NCRbqvii7duelDVJo2mDco+gQu2kXFhdu+QfsMddWWbnTjMxTpoiS0JBoLhUpWFYk5ZeC/MISGeJObe+fW+WE2YWZyvvPPnJm5EBU1i9aB70AXqFNidQFT61Bi9e4DyGtg6EGsUkItAZeC2KKkegAcC+IrUKGk2hTENfCckuolcCOQJiXVQ+BEELshHWBrKcfuCeIUeERAB5gDqv7juKbG/AaWKVivvLqftBbwZgLQU+BK/d1GL7RcbgMDBdPXiXzuAbWBt0BtZGwF+KI+nzVXIVoE9hWIc2PHq/su6A3gzAO6AN4BC+qzpd+v5Ewim9Ay1Qvgmyb+BTTG9KvJjbYXiHPrp5cAdx2hCJCGgjfBOKhJqmq/tEaC6t3Rd+4gbg1/BP5qwk9aXmnkgH5MuNXavEAa+vO+Jhpog0+7OddUqjtjbrVzAXk2ksGhSu08ZVmBVJS1A6+s5vnAsVlBngAfVCaTQX+AQwHk9cCxtCDJ3cgFeKSg/UPsPfCY/GVpQfy7UZJ9V4lWUj5ost6cNgtIV0/MaVQ4SF0As343KhwkK0WQsjqSdb/MFUHIyZGiMm0RZIyiI+S0tCzwtW8RhLAybdERwsq0RUcIK9MWHSGsTFt0hLAybdERwsq0/TeO3ALTPxOyPOYYDQAAAABJRU5ErkJggg=="},
+        {name:"Agile Metodologies",src:"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAACXBIWXMAAAsTAAALEwEAmpwYAAACOklEQVR4nO2Yz0tVQRTHP0/LFi2CiiTNTQUhtTAtWrZyY7iyrblNMn8U+Bdki0qj3qKVmzbpQhAJFF2kIJIQuVSRVvWoaKEWEf7IGxfmxeHwngrO0TtyPzCbO8N3zrkzc87MgZSUlJTDRgmQBX4BjwjQ+H4gcm2FgI2PgF4CIQO8Usb3O6eCoE8ZH7dNIAd8AAaBO8ApEkqugAOF2gYwAFwkYXTv0oF8W3fno+wgjK0E3gIjwEnxvQ34K4z8CtQDdUAn8E71x20KOL2fxp8DPgkDOlR/E/BH9C+p/hpgTDmxtF9OHAfmxMRrziDNTWDZjflcROueOw+RWAnz7ZRVEeb2NmPPu3NRvc2YBuWEac6oUfv3rifdNrWiFzBiWEw06RKXL8aEdhxivVPltkw8wRZwxXB1N1Rk88J98YemsWFSzNHsW3xIiLdjQ5eYI752eGVRiN/Ahmtijnnf4j+FeAU2VIg5Vn2Ly1h9FBuOqQufV74J8RPYr8Cyb/GPQvwqNly3PANvhHgrNjywjEItQnwCG6YMrin/KRcH2SIT16pMfBYDXos/NOpZe9xy++S5JO5DPpe5XYXPyxjSo66+jXvUu6VyzFPVH7/2vgDPfZVnjgAzyonWPfx5afxsgRdZLok1plq15yNgAThTYOyTgy6UlboMGyephy5U6qrE+yLGFytV7ujEY1VVSGJ7Wcz4jCuJRwlvv3eKNElfgRcEQib0ivezkI2P+R6y8fmH/g+XoYMzPiUlhd3xD+pxbV+80pIbAAAAAElFTkSuQmCC"},
 
     ]
     
     return(
-        <div className="isolate bg-[url('/public/bg-portfolio.png')] bg-cover h-screen w-full position: fixed  bg-center">
-            <NavBar />
-            <main>
-                <div className="relative px-6 lg:px-8">
-                    <div className="backdrop-blur md:mx-40  md:py-20 ">
-                <p className="font-sans text-center text-xl font-bold tracking-width py-1  text-amber-400 sm:text-3xl">
+      <div class="bg-[url('/public/bg-portfolio.png')] lg:h-screen h-full w-full bg-cover bg-center">       
+      <NavBar />
+        <div className=" border-teal-300 border-solid border-2 backdrop-blur px-6 lg:px-8 mx-4 md:mx-40 py-5 md:py-15  my-1 lg:my-0  grid content-center place-content-center">
+            
+                
+                <p className="font-sans text-center text-xl font-bold tracking-width pb-10 p-t-1 text-amber-400 sm:text-3xl">
                             I have worked with...
-                          </p>
-                    <div className=" flex flex-col md:flex-row ">
-                        <div className="text-center max-w-sm lg:mx-20 my-10 lg:my-0 ">
-                          <p className="font-sans text-xl font-bold tracking-width py-1  text-amber-400 sm:text-3xl">
+                </p>
+                <div className=" grid grid-cols-1 lg:grid-cols-3 ">
+                        <div className="text-center my-10 lg:mr-5 lg:my-0 grid lg:col-span-2 ">
+                          <p className="font-sans text-xl font-bold tracking-width pb-8  text-amber-400 sm:text-3xl">
                             Technologies
                           </p>
-                          <div className="grid grid-cols-2 gap-x-14 gap-y-2 content-center place-content-center">
+                          <div className="grid grid-cols-2 gap-x-6 gap-y-4 content-center place-content-center">
                             {tecs.map(t=>
-                            <div className="grid grid-cols-2 gap-x-1">
-                                <img src={t.src} alt="img" className="h-12"/>
-                                <h6 className="text-white text-center">{t.name}</h6>  
+                            <div className="grid grid-cols-5 gap-x-4 rounded-full  bg-white border-teal-400 border-solid border-2 px-6 text-base font-semibold leading-10 shadow-sm">
+                                <img src={t.src} alt="img" className="h-12 col-span-2"/>
+                                <h6 className="text-teal-700 text-center grid content-center place-content-center col-span-3">{t.name}</h6>  
                             </div>)}
                           </div>
                         </div>
 
-                        <div className="text-center max-w-sm lg:mx-20 my-10 lg:my-0 ">
-                          <p className="font-sans text-xl font-bold tracking-width py-1  text-amber-400 sm:text-3xl">
+                        <div className="text-center lg:pl-1 lg:mx-0  lg:my-0  border-l-2 border-teal-400  ">
+                        <p className="font-sans text-xl font-bold tracking-width pb-8  text-amber-400 sm:text-3xl">
                             Others
                           </p>
-                          
-                        <p className="font-sans text-md tracking-width py-2  text-white sm:text-lg">
-                        Full Stack Dev
-                          </p>
-                         
+                          <div className="grid content-center gap-y-4 gap-x-1 place-content-center ">
+                            {others.map(t=>
+                            <div className="grid grid-cols-5  rounded-full  bg-white border-teal-400 border-solid border-2 px-6 text-base font-semibold leading-10 shadow-sm">
+                                <img src={t.src} alt="img" className="h-12 col-span-1"/>
+                                <h6 className="text-teal-700 text-center grid content-center place-content-center col-span-4">{t.name}</h6>  
+                            </div>)}
+                          </div>
                         </div>
     
-                    </div>
-                    </div>
                 </div>
-            </main>
+          </div>
         </div>)
+        // (
+        //   <div class="bg-[url('/public/bg-portfolio.png')] lg:h-screen h-full w-full bg-cover bg-center">
+              
+        //       <NavBar />
+              
+        //               <div className=" border-teal-300 border-solid border-2 backdrop-blur px-6 lg:px-8 mx-4 md:mx-40 py-5 md:py-15  my-1 lg:my-0  grid grid-cols-1 lg:grid-cols-2 content-center place-content-center lg:w-9/12 lg:h-5/6">
+                          
+                          
+                            
+        //               <div className="max-w-fit mx-auto lg:my-0 lg:mx-0 grid content-center place-content-center">
+        //                 <img src="https://res.cloudinary.com/pfcampy/image/upload/v1676382613/fotor_2023-1-9_16_38_38_bizmiz.png" alt="img" className="lg:w-96 w-36 "/>
+        //               </div>
+        //               <div className="text-center max-w-sm lg:mx-20 my-10 lg:my-0 ">
+        //                       <p className="font-sans text-xl font-bold tracking-width py-1  text-amber-400 sm:text-3xl">
+        //                         VIRGINIA JUAREZ
+        //                       </p>
+        //                       <p className="font-sans text-md  tracking-width py-2  text-white sm:text-lg">
+        //                         Full Stack Developer with scientific academic background. I am passionate about new challenges and try
+        //                         to solve them with logical thinking and tenacity. I am a curious person; I learn quickly and always perform my
+        //                         job in a responsible and dedicated way.
+        //                       </p>
+        //                       <div className="my-5">
+        //                       <a
+        //                           href="#"
+        //                           className="rounded-full  bg-teal-700 border-teal-400 border-solid border-2 px-3.5 py-1.5 text-base font-semibold leading-7 text-white shadow-sm hover:bg-amber-400 hover:border-amber-400"
+        //                         >Download CV</a>
+        //                       </div>
+        //               </div>
+        
+                      
+                        
+        
+        //               </div> 
+                 
+             
+        //   </div>)
 }

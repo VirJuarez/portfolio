@@ -11,28 +11,28 @@ export default function ContactMe() {
     ]
     
     return(
-    <div class="bg-[url('/public/bg-portfolio.png')] xl:h-screen h-full w-full bg-cover  bg-center">
+    <div class="bg-[url('/public/bg-portfolio.png')] lg:h-screen h-full w-full bg-cover bg-center">
         
         <NavBar />
         
-                <div className="backdrop-blur px-6 lg:px-8 mx-4 md:mx-40 py-5 md:py-15  my-1 lg:my-0  grid content-center place-content-center">
+                <div className=" border-teal-300 border-solid border-2 backdrop-blur px-6 lg:px-8 mx-4 md:mx-40 py-5 md:py-15  my-1 lg:my-0  grid content-center place-content-center">
                     
                     
                       
-                      <div className="grid grid-cols-2 gap-y-10 lg:grid-cols-4 gap-x-20 content-center place-content-center ">
+                    <div className="grid grid-cols-2 gap-y-10 lg:grid-cols-4 gap-x-20 lg:gap-x-40  ">
                         {contact.map(c=>
                         <div key={c.name} >
-                        <a href={c.href} className="grid content-center place-content-center ">
+                        <a href={c.href} className="grid content-center place-content-center hover:animate-waving-hand">
                           <img src={c.logo} alt={c.name} className="h-16"/>
                         </a>
                         </div>)}
-                      </div>
+                    </div>
 
                     
 
-                    <div className="w-64 py-10 lg:w-[500px] grid content-center place-content-center">
+                    <div className="w-64 py-10 mx-auto lg:w-[500px] grid content-center place-content-center">
                      <h6 className="text-center py-5 text-white font-sans font-bold">If you like my portfolio, please, interact with my post on LinkedIn to make it more visible. Thanks!</h6>
-                     <iframe src="https://www.linkedin.com/embed/feed/update/urn:li:share:7031311750243201024"  frameborder="0" allowfullscreen="" title="Embedded post" className="w-64 lg:w-[500px] h-96 grid content-center place-content-center"></iframe>
+                     <iframe src="https://www.linkedin.com/embed/feed/update/urn:li:share:7031311750243201024"  frameborder="0" allowfullscreen="" title="Embedded post" className="w-64 lg:w-[500px] h-80 grid content-center place-content-center"></iframe>
                     </div>
 
 
