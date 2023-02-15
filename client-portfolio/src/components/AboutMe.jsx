@@ -4,7 +4,7 @@ import NavBar from "./NavBar"
 export default function AboutMe() {
     
     return(
-    <div className="isolate bg-[url('/public/bg-portfolio.png')] bg-no-repeat bg-cover w-screen h-screen bg-center">
+    <div className="isolate bg-[url('/public/bg-portfolio.png')] bg-cover h-screen w-full position: fixed  bg-center">
         <NavBar />
         <main>
             <div className="relative px-6 lg:px-8">

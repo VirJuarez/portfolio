@@ -9,7 +9,7 @@ import { Link } from "react-router-dom";
           
         
           return (
-            <div className="isolate bg-[url('/public/bg-portfolio.png')] bg-no-repeat bg-cover w-screen h-screen bg-center">
+            <div className="isolate bg-[url('/public/bg-portfolio.png')] bg-cover h-screen w-full position: fixed  bg-center">
               <main>
                 <div className="relative px-6 lg:px-8 ">
                   <div className="mx-auto max-w-fit py-56 sm:py-48 lg:py-40  my-auto ">
