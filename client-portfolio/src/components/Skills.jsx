@@ -1,9 +1,13 @@
 import React from "react";
 import NavBar from "./NavBar"
+import { useState, useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
 
 
 
 export default function Skills() {
+
+  const english = useSelector ((state) => state.english);
 
     let tecs=[
         {name:"Javascript",src:"data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHg9IjBweCIgeT0iMHB4Igp3aWR0aD0iNDgiIGhlaWdodD0iNDgiCnZpZXdCb3g9IjAgMCA0OCA0OCIKc3R5bGU9ImZpbGw6IzAwMDAwMDsiPgo8cGF0aCBmaWxsPSIjZmZkNjAwIiBkPSJNNiw0MlY2aDM2djM2SDZ6Ij48L3BhdGg+PHBhdGggZmlsbD0iIzAwMDAwMSIgZD0iTTI5LjUzOCAzMi45NDdjLjY5MiAxLjEyNCAxLjQ0NCAyLjIwMSAzLjAzNyAyLjIwMSAxLjMzOCAwIDIuMDQtLjY2NSAyLjA0LTEuNTg1IDAtMS4xMDEtLjcyNi0xLjQ5Mi0yLjE5OC0yLjEzM2wtLjgwNy0uMzQ0Yy0yLjMyOS0uOTg4LTMuODc4LTIuMjI2LTMuODc4LTQuODQxIDAtMi40MSAxLjg0NS00LjI0NCA0LjcyOC00LjI0NCAyLjA1MyAwIDMuNTI4LjcxMSA0LjU5MiAyLjU3M2wtMi41MTQgMS42MDdjLS41NTMtLjk4OC0xLjE1MS0xLjM3Ny0yLjA3OC0xLjM3Ny0uOTQ2IDAtMS41NDUuNTk3LTEuNTQ1IDEuMzc3IDAgLjk2NC42IDEuMzU0IDEuOTg1IDEuOTUxbC44MDcuMzQ0QzM2LjQ1MiAyOS42NDUgMzggMzAuODM5IDM4IDMzLjUyMyAzOCAzNi40MTUgMzUuNzE2IDM4IDMyLjY1IDM4Yy0yLjk5OSAwLTQuNzAyLTEuNTA1LTUuNjUtMy4zNjhMMjkuNTM4IDMyLjk0N3pNMTcuOTUyIDMzLjAyOWMuNTA2LjkwNiAxLjI3NSAxLjYwMyAyLjM4MSAxLjYwMyAxLjA1OCAwIDEuNjY3LS40MTggMS42NjctMi4wNDNWMjJoMy4zMzN2MTEuMTAxYzAgMy4zNjctMS45NTMgNC44OTktNC44MDUgNC44OTktMi41NzcgMC00LjQzNy0xLjc0Ni01LjE5NS0zLjM2OEwxNy45NTIgMzMuMDI5eiI+PC9wYXRoPgo8L3N2Zz4="},
@@ -26,15 +30,19 @@ export default function Skills() {
         {name:"Agile Metodologies",src:"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAACXBIWXMAAAsTAAALEwEAmpwYAAACOklEQVR4nO2Yz0tVQRTHP0/LFi2CiiTNTQUhtTAtWrZyY7iyrblNMn8U+Bdki0qj3qKVmzbpQhAJFF2kIJIQuVSRVvWoaKEWEf7IGxfmxeHwngrO0TtyPzCbO8N3zrkzc87MgZSUlJTDRgmQBX4BjwjQ+H4gcm2FgI2PgF4CIQO8Usb3O6eCoE8ZH7dNIAd8AAaBO8ApEkqugAOF2gYwAFwkYXTv0oF8W3fno+wgjK0E3gIjwEnxvQ34K4z8CtQDdUAn8E71x20KOL2fxp8DPgkDOlR/E/BH9C+p/hpgTDmxtF9OHAfmxMRrziDNTWDZjflcROueOw+RWAnz7ZRVEeb2NmPPu3NRvc2YBuWEac6oUfv3rifdNrWiFzBiWEw06RKXL8aEdhxivVPltkw8wRZwxXB1N1Rk88J98YemsWFSzNHsW3xIiLdjQ5eYI752eGVRiN/Ahmtijnnf4j+FeAU2VIg5Vn2Ly1h9FBuOqQufV74J8RPYr8Cyb/GPQvwqNly3PANvhHgrNjywjEItQnwCG6YMrin/KRcH2SIT16pMfBYDXos/NOpZe9xy++S5JO5DPpe5XYXPyxjSo66+jXvUu6VyzFPVH7/2vgDPfZVnjgAzyonWPfx5afxsgRdZLok1plq15yNgAThTYOyTgy6UlboMGyephy5U6qrE+yLGFytV7ujEY1VVSGJ7Wcz4jCuJRwlvv3eKNElfgRcEQib0ivezkI2P+R6y8fmH/g+XoYMzPiUlhd3xD+pxbV+80pIbAAAAAElFTkSuQmCC"},
 
     ]
+
+    useEffect(() => {
+            
+    },[english]);
     
-    return(
+    return english?(
       <div class="bg-[url('/public/bg-portfolio.png')] lg:h-screen h-full w-full bg-cover bg-center">       
       <NavBar />
         <div className=" border-teal-300 border-solid border-2 backdrop-blur px-6 lg:px-8 mx-4 md:mx-40 py-5 md:py-15  my-1 lg:my-0  grid content-center place-content-center">
             
                 
                 <p className="font-sans text-center text-xl font-bold tracking-width pb-10 p-t-1 text-amber-400 sm:text-3xl">
-                            I have worked with...
+                            I have experience working with...
                 </p>
                 <div className=" grid grid-cols-1 lg:grid-cols-3 ">
                         <div className="text-center my-10 lg:mr-5 lg:my-0 grid lg:col-span-2 ">
@@ -65,41 +73,44 @@ export default function Skills() {
     
                 </div>
           </div>
-        </div>)
-        // (
-        //   <div class="bg-[url('/public/bg-portfolio.png')] lg:h-screen h-full w-full bg-cover bg-center">
+        </div>):
+        (<div class="bg-[url('/public/bg-portfolio.png')] lg:h-screen h-full w-full bg-cover bg-center">       
+        <NavBar />
+          <div className=" border-teal-300 border-solid border-2 backdrop-blur px-6 lg:px-8 mx-4 md:mx-40 py-5 md:py-15  my-1 lg:my-0  grid content-center place-content-center">
               
-        //       <NavBar />
-              
-        //               <div className=" border-teal-300 border-solid border-2 backdrop-blur px-6 lg:px-8 mx-4 md:mx-40 py-5 md:py-15  my-1 lg:my-0  grid grid-cols-1 lg:grid-cols-2 content-center place-content-center lg:w-9/12 lg:h-5/6">
-                          
-                          
-                            
-        //               <div className="max-w-fit mx-auto lg:my-0 lg:mx-0 grid content-center place-content-center">
-        //                 <img src="https://res.cloudinary.com/pfcampy/image/upload/v1676382613/fotor_2023-1-9_16_38_38_bizmiz.png" alt="img" className="lg:w-96 w-36 "/>
-        //               </div>
-        //               <div className="text-center max-w-sm lg:mx-20 my-10 lg:my-0 ">
-        //                       <p className="font-sans text-xl font-bold tracking-width py-1  text-amber-400 sm:text-3xl">
-        //                         VIRGINIA JUAREZ
-        //                       </p>
-        //                       <p className="font-sans text-md  tracking-width py-2  text-white sm:text-lg">
-        //                         Full Stack Developer with scientific academic background. I am passionate about new challenges and try
-        //                         to solve them with logical thinking and tenacity. I am a curious person; I learn quickly and always perform my
-        //                         job in a responsible and dedicated way.
-        //                       </p>
-        //                       <div className="my-5">
-        //                       <a
-        //                           href="#"
-        //                           className="rounded-full  bg-teal-700 border-teal-400 border-solid border-2 px-3.5 py-1.5 text-base font-semibold leading-7 text-white shadow-sm hover:bg-amber-400 hover:border-amber-400"
-        //                         >Download CV</a>
-        //                       </div>
-        //               </div>
+                  
+                  <p className="font-sans text-center text-xl font-bold tracking-width pb-10 p-t-1 text-amber-400 sm:text-3xl">
+                              Tengo experiencia trabajando con...
+                  </p>
+                  <div className=" grid grid-cols-1 lg:grid-cols-3 ">
+                          <div className="text-center my-10 lg:mr-5 lg:my-0 grid lg:col-span-2 ">
+                            <p className="font-sans text-xl font-bold tracking-width pb-8  text-amber-400 sm:text-3xl">
+                              Tecnologías
+                            </p>
+                            <div className="grid grid-cols-2 gap-x-6 gap-y-4 content-center place-content-center">
+                              {tecs.map(t=>
+                              <div className="grid grid-cols-5 gap-x-4 rounded-full  bg-white border-teal-400 border-solid border-2 px-6 text-base font-semibold leading-10 shadow-sm">
+                                  <img src={t.src} alt="img" className="h-12 col-span-2"/>
+                                  <h6 className="text-teal-700 text-center grid content-center place-content-center col-span-3">{t.name}</h6>  
+                              </div>)}
+                            </div>
+                          </div>
+  
+                          <div className="text-center lg:pl-1 lg:mx-0  lg:my-0  border-l-2 border-teal-400  ">
+                          <p className="font-sans text-xl font-bold tracking-width pb-8  text-amber-400 sm:text-3xl">
+                              Otros
+                            </p>
+                            <div className="grid content-center gap-y-4 gap-x-1 place-content-center ">
+                              {others.map(t=>
+                              <div className="grid grid-cols-5  rounded-full  bg-white border-teal-400 border-solid border-2 px-6 text-base font-semibold leading-10 shadow-sm">
+                                  <img src={t.src} alt="img" className="h-12 col-span-1"/>
+                                  <h6 className="text-teal-700 text-center grid content-center place-content-center col-span-4">{t.name}</h6>  
+                              </div>)}
+                            </div>
+                          </div>
+      
+                  </div>
+            </div>
+          </div>)
         
-                      
-                        
-        
-        //               </div> 
-                 
-             
-        //   </div>)
 }

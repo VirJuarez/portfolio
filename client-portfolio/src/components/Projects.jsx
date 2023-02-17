@@ -1,7 +1,14 @@
 import React from "react";
 import NavBar from "./NavBar"
+import { useState, useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
 
 export default function Projects() {
+    const english = useSelector ((state) => state.english);
+
+  useEffect(() => {
+            
+  },[english]);
     
     return(
         <div class="bg-[url('/public/bg-portfolio.png')] lg:h-screen h-full w-full bg-cover bg-center">

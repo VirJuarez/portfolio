@@ -1,4 +1,4 @@
-// import {GET_RECIPES} 
+import { CHANGE_LANGUAGE } from "../actions"
 
 const initialState = {
     english:true 
@@ -7,10 +7,13 @@ const initialState = {
 
 function rootReducer (state=initialState,action){
  switch(action.type){
-    // case CHANGE_LANGUAGE:
-    //     return{
-    //         english: !state.english,
-    //     }
+    case CHANGE_LANGUAGE:
+        let boolean = state.english
+        return{
+            english: !boolean
+        }
+        default:
+            return{...state}
 }}
 
 
