@@ -36,9 +36,12 @@ export default function Skills() {
     },[english]);
     
     return english?(
-      <div class="bg-[url('/public/bg-portfolio.png')] lg:h-screen h-full w-full bg-cover bg-center">       
+      <div class="bg-[url('/public/bg-portfolio.png')] lg:h-screen h-full w-full bg-cover bg-center">   
+       <div className="flex justify-end xl:justify-start ">
+      <img src="/VJ_logo2.svg" alt="img" className="xl:w-40 fixed xl:mt-5 xl:ml-5 w-10 mr-3 xl:mr-0 mt-3"/> 
+    </div>    
       <NavBar />
-        <div className=" border-teal-300 border-solid border-2 backdrop-blur px-6 lg:px-8 mx-4 md:mx-40 py-5 md:py-15  my-1 lg:my-0  grid content-center place-content-center">
+        <div className=" border-teal-300 border-solid border-2 backdrop-blur px-6 lg:px-8 mx-4 md:mx-48 py-5 md:py-15  my-1 lg:my-0  grid content-center place-content-center">
             
                 
                 <p className="font-sans text-center text-xl font-bold tracking-width pb-10 p-t-1 text-amber-400 sm:text-3xl">
@@ -74,9 +77,12 @@ export default function Skills() {
                 </div>
           </div>
         </div>):
-        (<div class="bg-[url('/public/bg-portfolio.png')] lg:h-screen h-full w-full bg-cover bg-center">       
+        (<div class="bg-[url('/public/bg-portfolio.png')] lg:h-screen h-full w-full bg-cover bg-center">   
+         <div className="flex justify-end xl:justify-start ">
+      <img src="/VJ_logo2.svg" alt="img" className="xl:w-40 fixed xl:mt-5 xl:ml-5 w-10 mr-3 xl:mr-0 mt-3"/> 
+    </div>    
         <NavBar />
-          <div className=" border-teal-300 border-solid border-2 backdrop-blur px-6 lg:px-8 mx-4 md:mx-40 py-5 md:py-15  my-1 lg:my-0  grid content-center place-content-center">
+          <div className=" border-teal-300 border-solid border-2 backdrop-blur px-6 lg:px-8 mx-4 md:mx-48 py-5 md:py-15  my-1 lg:my-0  grid content-center place-content-center">
               
                   
                   <p className="font-sans text-center text-xl font-bold tracking-width pb-10 p-t-1 text-amber-400 sm:text-3xl">
