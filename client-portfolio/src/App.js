@@ -6,6 +6,8 @@ import AboutMe from './components/AboutMe';
 import Skills from './components/Skills';
 import ContactMe from './components/ContactMe';
 import Projects from './components/Projects';
+import Chat from './components/Chat';
+
 
 
 function App() {
@@ -17,6 +19,7 @@ function App() {
       <Route path="/skills" element={<Skills/>}/>
       <Route path="/contact" element={<ContactMe/>}/>
       <Route path="/projects" element={<Projects/>}/>
+      <Route path="/chat" element={<Chat/>}/>
       </Routes>
     </React.Fragment>
   );
