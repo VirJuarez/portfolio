@@ -19,9 +19,9 @@ function App() {
       <Route path="/skills" element={<Skills/>}/>
       <Route path="/contact" element={<ContactMe/>}/>
       <Route path="/projects" element={<Projects/>}/>
-      <Route path="/chat" element={<Chat/>}/>
       </Routes>
     </React.Fragment>
+      
   );
 }
 

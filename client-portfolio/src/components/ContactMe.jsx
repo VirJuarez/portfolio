@@ -2,6 +2,8 @@ import React from "react";
 import NavBar from "./NavBar"
 import { useState, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
+import Chat from "./Chat";
+import ChatIngles from "./ChatIngles";
 
 export default function ContactMe() {
 
@@ -33,7 +35,7 @@ export default function ContactMe() {
                     <div className="grid grid-cols-2 gap-y-10 lg:grid-cols-4 gap-x-20 lg:gap-x-40  ">
                         {contact.map(c=>
                         <div key={c.name} >
-                        <a href={c.href} className="grid content-center place-content-center hover:animate-waving-hand">
+                        <a href={c.href} className="grid content-center place-content-center animate__animated animate__swing hover:animate-waving-hand">
                           <img src={c.logo} alt={c.name} className="h-16"/>
                         </a>
                         </div>)}
@@ -52,7 +54,7 @@ export default function ContactMe() {
 
                 </div> 
            
-       
+                <div className="fixed bottom-0 right-0"><ChatIngles /></div>
     </div>):
     (
         <div class="bg-[url('/public/bg-portfolio.png')] lg:h-screen h-full w-full bg-cover bg-center">
@@ -87,6 +89,6 @@ export default function ContactMe() {
     
                     </div> 
                
-           
+                    <div className="fixed bottom-0 right-0"><Chat /></div>
         </div>)
 }

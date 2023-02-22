@@ -3,14 +3,14 @@ import { useState, useEffect, useRef } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 
-export default function Chat (){
+export default function ChatIngles (){
 
     const container = useRef(null)
 
     const [open, setOpen]=useState(false);
     const [question, setQuestion]=useState("");
     const [loading, setLoading]=useState(true);
-    const [message, setMessage]=useState([{id:"1", text: "Hola, soy un bot diseñado con IA para responder preguntas sobre Virginia.", type:"bot"}, {id:"2", text: "Si la respuesta no es la esperada, por favor, intenta reformular", type:"bot"}])
+    const [message, setMessage]=useState([{id:"1", text: "Hello, I am a bot created with AI. I can answer you some questions about Virginia.", type:"bot"}, {id:"2", text: "If the answer is´nt what you expected, please, try to paraphrase your question.", type:"bot"}])
     
     const handleChange=(e)=>{
         setQuestion(e.target.value)
@@ -19,10 +19,10 @@ export default function Chat (){
     }
 
     const rtas={
-        presentacion:(<p>Hola!, mi nombre es Virginia Juarez, soy Full Stack Developer graduada del bootcamp de Henry. Mi nivel de inglés es C1. Te invito a ver más sobre mí <Link className="underline" to={`/about`}>AQUÍ</Link></p>), 
-        contacto:(<p>Actualmente estoy buscando mi primer trabajo en IT. Puedes descargar mi CV <a className="underline" href="./CV_VirginiaJuarez_2023.pdf" download="CV_JUAREZ_MV.pdf">AQUÍ</a>. También puedes contactarme directamente por <a className="underline" href="mailto:virginia.juarez1996@gmail.com">Mail</a>, <a className="underline" href="https://walink.co/855b8f">WhatApp</a> o <a className="underline" href="https://www.linkedin.com/in/maria-virginia-juarez/">LinkedIn</a></p>),
-        tecnologias:(<p>Manejo principalmente el stack PERN, pero puedes ver todas las tecnologías en las que tengo experiencia <Link className="underline" to={`/skills`}>AQUÍ</Link></p>), 
-        laboral:(<p>No tengo experiencia laboral formal en IT por el momento. Sin embargo, he realizado proyectos (además de este portfolio) que detallo <Link className="underline" to={`/projects`}>AQUÍ</Link> </p>) }
+        presentacion:(<p> Hello! mi name is Virginia Juarez, I am a Full Stack Developer graduated from Henry´s bootcamp.<Link className="underline" to={`/about`}>HERE</Link> you will find more information about me.</p>), 
+        contacto:(<p>Currently, I am looking for my first job on IT. Yo can download my CV <a className="underline" href="./CV_VirginiaJuarez_2023_english.pdf" download="CV_JUAREZ_MV_ENGLISH.pdf">HERE</a>. Also, you can contact me directly by <a className="underline" href="mailto:virginia.juarez1996@gmail.com">Mail</a>, <a className="underline" href="https://walink.co/855b8f">WhatApp</a> or <a className="underline" href="https://www.linkedin.com/in/maria-virginia-juarez/">LinkedIn</a></p>),
+        tecnologias:(<p>I am most confortable with the PERN stack, but of course, I am open to learn new skills. You can see all the technologies I have worked with <Link className="underline" to={`/skills`}>HERE</Link></p>), 
+        laboral:(<p>I don´t have professional experience in IT at the moment. However, I have developed some projects (apart from this portfolio) which are detailed<Link className="underline" to={`/projects`}>HERE</Link> </p>) }
 
     async function handleSubmit(e){
         e.preventDefault();

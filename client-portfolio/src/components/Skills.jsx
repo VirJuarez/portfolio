@@ -2,6 +2,8 @@ import React from "react";
 import NavBar from "./NavBar"
 import { useState, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
+import Chat from "./Chat";
+import ChatIngles from "./ChatIngles";
 
 
 
@@ -14,8 +16,8 @@ export default function Skills() {
         {name:"Typescript",src:"data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHg9IjBweCIgeT0iMHB4Igp3aWR0aD0iNDgiIGhlaWdodD0iNDgiCnZpZXdCb3g9IjAgMCA0OCA0OCIKc3R5bGU9ImZpbGw6IzAwMDAwMDsiPgo8bGluZWFyR3JhZGllbnQgaWQ9Ik8yemlwWGx3elp5T3NlOF8zTDJ5eWFfd3BabUt6azExQXpKX2dyMSIgeDE9IjE1LjE4OSIgeDI9IjMyLjI3NiIgeTE9Ii0uMjA4IiB5Mj0iNDYuNzM3IiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSI+PHN0b3Agb2Zmc2V0PSIwIiBzdG9wLWNvbG9yPSIjMmFhNGY0Ij48L3N0b3A+PHN0b3Agb2Zmc2V0PSIxIiBzdG9wLWNvbG9yPSIjMDA3YWQ5Ij48L3N0b3A+PC9saW5lYXJHcmFkaWVudD48cmVjdCB3aWR0aD0iMzYiIGhlaWdodD0iMzYiIHg9IjYiIHk9IjYiIGZpbGw9InVybCgjTzJ6aXBYbHd6WnlPc2U4XzNMMnl5YV93cFptS3prMTFBekpfZ3IxKSI+PC9yZWN0Pjxwb2x5Z29uIGZpbGw9IiNmZmYiIHBvaW50cz0iMjcuNDksMjIgMTQuMjI3LDIyIDE0LjIyNywyNS4yNjQgMTguOTg0LDI1LjI2NCAxOC45ODQsNDAgMjIuNzUzLDQwIDIyLjc1MywyNS4yNjQgMjcuNDksMjUuMjY0Ij48L3BvbHlnb24+PHBhdGggZmlsbD0iI2ZmZiIgZD0iTTM5LjE5NCwyNi4wODRjMCwwLTEuNzg3LTEuMTkyLTMuODA3LTEuMTkycy0yLjc0NywwLjk2LTIuNzQ3LDEuOTg2CWMwLDIuNjQ4LDcuMzgxLDIuMzgzLDcuMzgxLDcuNzEyYzAsOC4yMDktMTEuMjU0LDQuNTY4LTExLjI1NCw0LjU2OFYzNS4yMmMwLDAsMi4xNTIsMS42MjIsNC43MzMsMS42MjJzMi40ODMtMS42ODgsMi40ODMtMS45MgljMC0yLjQ0OS03LjMxNS0yLjQ0OS03LjMxNS03Ljg3OGMwLTcuMzgxLDEwLjY1OC00LjQ2OSwxMC42NTgtNC40NjlMMzkuMTk0LDI2LjA4NHoiPjwvcGF0aD4KPC9zdmc+"},
         {name:"React", src:"data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHg9IjBweCIgeT0iMHB4Igp3aWR0aD0iNDgiIGhlaWdodD0iNDgiCnZpZXdCb3g9IjAgMCA0OCA0OCIKc3R5bGU9ImZpbGw6IzAwMDAwMDsiPgo8cGF0aCBmaWxsPSIjODBkZWVhIiBkPSJNMjQsMzRDMTEuMSwzNCwxLDI5LjYsMSwyNGMwLTUuNiwxMC4xLTEwLDIzLTEwYzEyLjksMCwyMyw0LjQsMjMsMTBDNDcsMjkuNiwzNi45LDM0LDI0LDM0eiBNMjQsMTYJYy0xMi42LDAtMjEsNC4xLTIxLDhjMCwzLjksOC40LDgsMjEsOHMyMS00LjEsMjEtOEM0NSwyMC4xLDM2LjYsMTYsMjQsMTZ6Ij48L3BhdGg+PHBhdGggZmlsbD0iIzgwZGVlYSIgZD0iTTE1LjEsNDQuNmMtMSwwLTEuOC0wLjItMi42LTAuN0M3LjYsNDEuMSw4LjksMzAuMiwxNS4zLDE5bDAsMGMzLTUuMiw2LjctOS42LDEwLjMtMTIuNGMzLjktMyw3LjQtMy45LDkuOC0yLjUJYzIuNSwxLjQsMy40LDQuOSwyLjgsOS44Yy0wLjYsNC42LTIuNiwxMC01LjYsMTUuMmMtMyw1LjItNi43LDkuNi0xMC4zLDEyLjRDMTkuNyw0My41LDE3LjIsNDQuNiwxNS4xLDQ0LjZ6IE0zMi45LDUuNAljLTEuNiwwLTMuNywwLjktNiwyLjdjLTMuNCwyLjctNi45LDYuOS05LjgsMTEuOWwwLDBjLTYuMywxMC45LTYuOSwyMC4zLTMuNiwyMi4yYzEuNywxLDQuNSwwLjEsNy42LTIuM2MzLjQtMi43LDYuOS02LjksOS44LTExLjkJYzIuOS01LDQuOC0xMC4xLDUuNC0xNC40YzAuNS00LTAuMS02LjgtMS44LTcuOEMzNCw1LjYsMzMuNSw1LjQsMzIuOSw1LjR6Ij48L3BhdGg+PHBhdGggZmlsbD0iIzgwZGVlYSIgZD0iTTMzLDQ0LjZjLTUsMC0xMi4yLTYuMS0xNy42LTE1LjZDOC45LDE3LjgsNy42LDYuOSwxMi41LDQuMWwwLDBDMTcuNCwxLjMsMjYuMiw3LjgsMzIuNywxOQljMyw1LjIsNSwxMC42LDUuNiwxNS4yYzAuNyw0LjktMC4zLDguMy0yLjgsOS44QzM0LjcsNDQuNCwzMy45LDQ0LjYsMzMsNDQuNnogTTEzLjUsNS44Yy0zLjMsMS45LTIuNywxMS4zLDMuNiwyMi4yCWM2LjMsMTAuOSwxNC4xLDE2LjEsMTcuNCwxNC4yYzEuNy0xLDIuMy0zLjgsMS44LTcuOGMtMC42LTQuMy0yLjUtOS40LTUuNC0xNC40QzI0LjYsOS4xLDE2LjgsMy45LDEzLjUsNS44TDEzLjUsNS44eiI+PC9wYXRoPjxjaXJjbGUgY3g9IjI0IiBjeT0iMjQiIHI9IjQiIGZpbGw9IiM4MGRlZWEiPjwvY2lyY2xlPgo8L3N2Zz4="},
         {name:"Redux",src:"data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHg9IjBweCIgeT0iMHB4Igp3aWR0aD0iNDgiIGhlaWdodD0iNDgiCnZpZXdCb3g9IjAgMCA0OCA0OCIKc3R5bGU9ImZpbGw6IzAwMDAwMDsiPgo8cGF0aCBmaWxsPSIjN2U1N2MyIiBkPSJNMjMsNGMtNi42MTcsMC0xMiw3LjI3LTEyLDE2LjIwNWMwLDQuODM0LDEuNTgyLDkuMTY5LDQuMDc4LDEyLjEzNkMxNS4wMywzMi41NTQsMTUsMzIuNzczLDE1LDMzCWMwLDEuNjU3LDEuMzQzLDMsMywzczMtMS4zNDMsMy0zcy0xLjM0My0zLTMtM2MtMC4zMTUsMC0wLjYxMiwwLjA2Mi0wLjg5NywwLjE1MkMxNS4yMDYsMjcuNzMxLDE0LDI0LjE3NSwxNCwyMC4yMDUJQzE0LDEyLjkyNCwxOC4wMzcsNywyMyw3YzMuODM3LDAsNy4xMTEsMy41NDcsOC40MDQsOC41MThjMS4xMjIsMC4zNDYsMi4yMzcsMC43ODIsMy4zMywxLjMwOEMzMy41NzksOS41MDgsMjguNzU5LDQsMjMsNHoiPjwvcGF0aD48cGF0aCBmaWxsPSIjN2U1N2MyIiBkPSJNMzUuNTA3LDIwLjA4NGMtMy45NDctMi4zOTItOC4zNzQtMy40NDItMTIuMTgyLTIuOTU5QzIyLjc3NSwxNi40NDQsMjEuOTQzLDE2LDIxLDE2CWMtMS42NTcsMC0zLDEuMzQzLTMsM3MxLjM0MywzLDMsM2MxLjI3MiwwLDIuMzUzLTAuNzk1LDIuNzg5LTEuOTEyYzMuMTE4LTAuMzc5LDYuODEyLDAuNTMxLDEwLjE2MywyLjU2MwljNi40MDMsMy44ODEsOS42NywxMC41NjksNy4yODIsMTQuOTExYy0wLjgyNywxLjUwNC0yLjI4NiwyLjU3Mi00LjIxOCwzLjA5Yy0yLjI4NiwwLjYxMS01LjAwNywwLjM5NC03LjcyNy0wLjUyOAljLTAuODM5LDAuNzcyLTEuNzQ5LDEuNDk4LTIuNzI1LDIuMTY4YzIuNTUyLDEuMTE3LDUuMTk2LDEuNzA0LDcuNjY5LDEuNzA0YzEuMjQsMCwyLjQzOC0wLjE0NywzLjU1OS0wLjQ0NwljMi43NDEtMC43MzMsNC44NDEtMi4zMDQsNi4wNzEtNC41NDJDNDcuMDE2LDMzLjI3Niw0My4yNjcsMjQuNzg3LDM1LjUwNywyMC4wODR6Ij48L3BhdGg+PHBhdGggZmlsbD0iIzdlNTdjMiIgZD0iTTM1LDI4Ljk5MkMzNSwyNy4zNCwzMy42NTcsMjYsMzIsMjZzLTMsMS4zNC0zLDIuOTkyYzAsMC42NjksMC4yMjgsMS4yODEsMC42LDEuNzc5CWMtMS4yNzksMi44MDItMy43NDQsNS41NjctNy4wNjIsNy41NzhjLTMuODY1LDIuMzQ0LTguMTg1LDMuMjAyLTExLjU1NSwyLjMwMmMtMS45MzItMC41MTgtMy4zOTEtMS41ODYtNC4yMTgtMy4wOQljLTEuNzAyLTMuMDk0LTAuNTIxLTcuMzc2LDIuNjEtMTAuOTg4Yy0wLjMyMy0xLjE0NC0wLjU2Mi0yLjM0LTAuNzA2LTMuNTc1Yy01LjA3LDQuNzk3LTcuMTA5LDExLjMyMy00LjUzMiwxNi4wMDkJYzEuMjMsMi4yMzgsMy4zMywzLjgwOSw2LjA3MSw0LjU0MmMxLjEyMSwwLjMsMi4zMTgsMC40NDcsMy41NTksMC40NDdjMy4zNDYsMCw3LjAwNy0xLjA2OCwxMC4zMjYtMy4wOAljMy44MzYtMi4zMjUsNi42ODMtNS41NzcsOC4yMDktOC45NjJDMzMuODE1LDMxLjgwMSwzNSwzMC41NDEsMzUsMjguOTkyeiI+PC9wYXRoPgo8L3N2Zz4="},
-        {name: "Material UI", src:"data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHg9IjBweCIgeT0iMHB4Igp3aWR0aD0iNDgiIGhlaWdodD0iNDgiCnZpZXdCb3g9IjAgMCA0OCA0OCIKc3R5bGU9ImZpbGw6IzAwMDAwMDsiPgo8cG9seWdvbiBmaWxsPSIjMjliNmY2IiBwb2ludHM9IjEsNSA3LDkgNywyOSAxLDI1Ij48L3BvbHlnb24+PHBvbHlnb24gZmlsbD0iIzAyODhkMSIgcG9pbnRzPSI0NywyMCA0MSwyNCA0MSwzNyA0NywzMyI+PC9wb2x5Z29uPjxwb2x5Z29uIGZpbGw9IiMwMjg4ZDEiIHBvaW50cz0iNDcsNiA0MSwxMCA0MSwxNyA0NywxMyI+PC9wb2x5Z29uPjxwb2x5Z29uIGZpbGw9IiMwMjg4ZDEiIHBvaW50cz0iMzUsNSAyOSw5IDI5LDI5IDM1LDI1Ij48L3BvbHlnb24+PHBvbHlnb24gZmlsbD0iIzI5YjZmNiIgcG9pbnRzPSIxLDEyIDE4LDIzIDE4LDE2IDEsNSI+PC9wb2x5Z29uPjxwb2x5Z29uIGZpbGw9IiMwMjg4ZDEiIHBvaW50cz0iMzUsMTIgMTgsMjMgMTgsMTYgMzUsNSI+PC9wb2x5Z29uPjxwb2x5Z29uIGZpbGw9IiMwMjg4ZDEiIHBvaW50cz0iMzUsMjYgMTgsMzcgMTgsMzAgMzUsMTkiPjwvcG9seWdvbj48cG9seWdvbiBmaWxsPSIjMDI4OGQxIiBwb2ludHM9IjQ3LDM0IDMwLDQ1IDMwLDM4IDQ3LDI3Ij48L3BvbHlnb24+PHBvbHlnb24gZmlsbD0iIzI5YjZmNiIgcG9pbnRzPSIzMCwzNy43NjUgMTgsMzAgMTgsMzcgMzAsNDQuNzY1Ij48L3BvbHlnb24+Cjwvc3ZnPg=="},
-        {name:"TailwindCSS", src:"data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHg9IjBweCIgeT0iMHB4Igp3aWR0aD0iNDgiIGhlaWdodD0iNDgiCnZpZXdCb3g9IjAgMCA0OCA0OCIKc3R5bGU9ImZpbGw6IzAwMDAwMDsiPgo8bGluZWFyR3JhZGllbnQgaWQ9ImlPbVFmam9DQzRIdzZ6VndSalNEaGFfeDdYTU5HaDJ2ZHFBX2dyMSIgeDE9IjIxLjg2MSIgeDI9IjI1LjcwMyIgeTE9IjguMjM3IiB5Mj0iMzYuNTUyIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSI+PHN0b3Agb2Zmc2V0PSIwIiBzdG9wLWNvbG9yPSIjMDBjMWUwIj48L3N0b3A+PHN0b3Agb2Zmc2V0PSIxIiBzdG9wLWNvbG9yPSIjMDA5YmI4Ij48L3N0b3A+PC9saW5lYXJHcmFkaWVudD48cGF0aCBmaWxsPSJ1cmwoI2lPbVFmam9DQzRIdzZ6VndSalNEaGFfeDdYTU5HaDJ2ZHFBX2dyMSkiIGQ9Ik0yNCw5LjYwNGMtNS41ODksMC05LjM0NywyLjQzOS0xMS4yNzYsNy4zMThjLTAuMiwwLjUwNSwwLjQxNywwLjkyLDAuODE2LDAuNTUxIGMyLjAzNS0xLjg4Miw0LjMyMi0yLjUwNSw2Ljg2LTEuODcxYzEuODI2LDAuNDU2LDMuMTMxLDEuNzgxLDQuNTc2LDMuMjQ3QzI3LjMyOCwyMS4yMzYsMzAuMDUxLDI0LDM2LDI0IGM1LjU4OSwwLDkuMzQ4LTIuNDQsMTEuMjc2LTcuMzE5YzAuMi0wLjUwNS0wLjQxNy0wLjkyLTAuODE2LTAuNTUxYy0yLjAzNSwxLjg4Mi00LjMyMiwyLjUwNi02Ljg2LDEuODcyIGMtMS44MjUtMC40NTYtMy4xMy0xLjc4MS00LjU3NS0zLjI0N0MzMi42NzIsMTIuMzY3LDI5Ljk0OCw5LjYwNCwyNCw5LjYwNEwyNCw5LjYwNHogTTEyLDI0Yy01LjU4OSwwLTkuMzQ4LDIuNDQtMTEuMjc2LDcuMzE5IGMtMC4yLDAuNTA1LDAuNDE3LDAuOTIsMC44MTYsMC41NTFjMi4wMzUtMS44ODIsNC4zMjItMi41MDYsNi44Ni0xLjg3MWMxLjgyNSwwLjQ1NywzLjEzLDEuNzgxLDQuNTc1LDMuMjQ2IGMyLjM1MywyLjM4OCw1LjA3Nyw1LjE1MiwxMS4wMjUsNS4xNTJjNS41ODksMCw5LjM0OC0yLjQ0LDExLjI3Ni03LjMxOWMwLjItMC41MDUtMC40MTctMC45Mi0wLjgxNi0wLjU1MSBjLTIuMDM1LDEuODgyLTQuMzIyLDIuNTA2LTYuODYsMS44NzFjLTEuODI2LTAuNDU2LTMuMTMxLTEuNzgxLTQuNTc2LTMuMjQ2QzIwLjY3MiwyNi43NjQsMTcuOTQ5LDI0LDEyLDI0TDEyLDI0eiI+PC9wYXRoPgo8L3N2Zz4="},
+        {name: "MaterialUI", src:"data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHg9IjBweCIgeT0iMHB4Igp3aWR0aD0iNDgiIGhlaWdodD0iNDgiCnZpZXdCb3g9IjAgMCA0OCA0OCIKc3R5bGU9ImZpbGw6IzAwMDAwMDsiPgo8cG9seWdvbiBmaWxsPSIjMjliNmY2IiBwb2ludHM9IjEsNSA3LDkgNywyOSAxLDI1Ij48L3BvbHlnb24+PHBvbHlnb24gZmlsbD0iIzAyODhkMSIgcG9pbnRzPSI0NywyMCA0MSwyNCA0MSwzNyA0NywzMyI+PC9wb2x5Z29uPjxwb2x5Z29uIGZpbGw9IiMwMjg4ZDEiIHBvaW50cz0iNDcsNiA0MSwxMCA0MSwxNyA0NywxMyI+PC9wb2x5Z29uPjxwb2x5Z29uIGZpbGw9IiMwMjg4ZDEiIHBvaW50cz0iMzUsNSAyOSw5IDI5LDI5IDM1LDI1Ij48L3BvbHlnb24+PHBvbHlnb24gZmlsbD0iIzI5YjZmNiIgcG9pbnRzPSIxLDEyIDE4LDIzIDE4LDE2IDEsNSI+PC9wb2x5Z29uPjxwb2x5Z29uIGZpbGw9IiMwMjg4ZDEiIHBvaW50cz0iMzUsMTIgMTgsMjMgMTgsMTYgMzUsNSI+PC9wb2x5Z29uPjxwb2x5Z29uIGZpbGw9IiMwMjg4ZDEiIHBvaW50cz0iMzUsMjYgMTgsMzcgMTgsMzAgMzUsMTkiPjwvcG9seWdvbj48cG9seWdvbiBmaWxsPSIjMDI4OGQxIiBwb2ludHM9IjQ3LDM0IDMwLDQ1IDMwLDM4IDQ3LDI3Ij48L3BvbHlnb24+PHBvbHlnb24gZmlsbD0iIzI5YjZmNiIgcG9pbnRzPSIzMCwzNy43NjUgMTgsMzAgMTgsMzcgMzAsNDQuNzY1Ij48L3BvbHlnb24+Cjwvc3ZnPg=="},
+        {name:"Tailwind", src:"data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHg9IjBweCIgeT0iMHB4Igp3aWR0aD0iNDgiIGhlaWdodD0iNDgiCnZpZXdCb3g9IjAgMCA0OCA0OCIKc3R5bGU9ImZpbGw6IzAwMDAwMDsiPgo8bGluZWFyR3JhZGllbnQgaWQ9ImlPbVFmam9DQzRIdzZ6VndSalNEaGFfeDdYTU5HaDJ2ZHFBX2dyMSIgeDE9IjIxLjg2MSIgeDI9IjI1LjcwMyIgeTE9IjguMjM3IiB5Mj0iMzYuNTUyIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSI+PHN0b3Agb2Zmc2V0PSIwIiBzdG9wLWNvbG9yPSIjMDBjMWUwIj48L3N0b3A+PHN0b3Agb2Zmc2V0PSIxIiBzdG9wLWNvbG9yPSIjMDA5YmI4Ij48L3N0b3A+PC9saW5lYXJHcmFkaWVudD48cGF0aCBmaWxsPSJ1cmwoI2lPbVFmam9DQzRIdzZ6VndSalNEaGFfeDdYTU5HaDJ2ZHFBX2dyMSkiIGQ9Ik0yNCw5LjYwNGMtNS41ODksMC05LjM0NywyLjQzOS0xMS4yNzYsNy4zMThjLTAuMiwwLjUwNSwwLjQxNywwLjkyLDAuODE2LDAuNTUxIGMyLjAzNS0xLjg4Miw0LjMyMi0yLjUwNSw2Ljg2LTEuODcxYzEuODI2LDAuNDU2LDMuMTMxLDEuNzgxLDQuNTc2LDMuMjQ3QzI3LjMyOCwyMS4yMzYsMzAuMDUxLDI0LDM2LDI0IGM1LjU4OSwwLDkuMzQ4LTIuNDQsMTEuMjc2LTcuMzE5YzAuMi0wLjUwNS0wLjQxNy0wLjkyLTAuODE2LTAuNTUxYy0yLjAzNSwxLjg4Mi00LjMyMiwyLjUwNi02Ljg2LDEuODcyIGMtMS44MjUtMC40NTYtMy4xMy0xLjc4MS00LjU3NS0zLjI0N0MzMi42NzIsMTIuMzY3LDI5Ljk0OCw5LjYwNCwyNCw5LjYwNEwyNCw5LjYwNHogTTEyLDI0Yy01LjU4OSwwLTkuMzQ4LDIuNDQtMTEuMjc2LDcuMzE5IGMtMC4yLDAuNTA1LDAuNDE3LDAuOTIsMC44MTYsMC41NTFjMi4wMzUtMS44ODIsNC4zMjItMi41MDYsNi44Ni0xLjg3MWMxLjgyNSwwLjQ1NywzLjEzLDEuNzgxLDQuNTc1LDMuMjQ2IGMyLjM1MywyLjM4OCw1LjA3Nyw1LjE1MiwxMS4wMjUsNS4xNTJjNS41ODksMCw5LjM0OC0yLjQ0LDExLjI3Ni03LjMxOWMwLjItMC41MDUtMC40MTctMC45Mi0wLjgxNi0wLjU1MSBjLTIuMDM1LDEuODgyLTQuMzIyLDIuNTA2LTYuODYsMS44NzFjLTEuODI2LTAuNDU2LTMuMTMxLTEuNzgxLTQuNTc2LTMuMjQ2QzIwLjY3MiwyNi43NjQsMTcuOTQ5LDI0LDEyLDI0TDEyLDI0eiI+PC9wYXRoPgo8L3N2Zz4="},
         {name:"Node.js", src:"data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHg9IjBweCIgeT0iMHB4Igp3aWR0aD0iNDgiIGhlaWdodD0iNDgiCnZpZXdCb3g9IjAgMCA0OCA0OCIKc3R5bGU9ImZpbGw6IzAwMDAwMDsiPgo8cGF0aCBmaWxsPSIjMjFhMzY2IiBkPSJNMjQuMDA3LDQ1LjQxOWMtMC41NzQsMC0xLjE0My0wLjE1LTEuNjQ2LTAuNDRsLTUuMjQtMy4xMDNjLTAuNzgzLTAuNDM4LTAuNDAxLTAuNTkzLTAuMTQzLTAuNjgyCWMxLjA0NC0wLjM2NSwxLjI1NS0wLjQ0OCwyLjM2OS0xLjA4MWMwLjExNy0wLjA2NywwLjI3LTAuMDQzLDAuMzksMC4wMjhsNC4wMjYsMi4zODljMC4xNDUsMC4wNzksMC4zNTIsMC4wNzksMC40ODYsMGwxNS42OTctOS4wNjEJYzAuMTQ1LTAuMDgzLDAuMjQtMC4yNTEsMC4yNC0wLjQyNFYxNC45MzJjMC0wLjE4MS0wLjA5NC0wLjM0Mi0wLjI0My0wLjQzMkwyNC4yNTMsNS40NDZjLTAuMTQ1LTAuMDg2LTAuMzM4LTAuMDg2LTAuNDgzLDAJTDguMDgyLDE0LjQ5OWMtMC4xNTIsMC4wODYtMC4yNDksMC4yNTUtMC4yNDksMC40Mjh2MTguMTE0YzAsMC4xNzMsMC4wOTQsMC4zMzgsMC4yNDQsMC40Mmw0LjI5OSwyLjQ4MwljMi4zMzQsMS4xNjcsMy43Ni0wLjIwOCwzLjc2LTEuNTkxVjE2LjQ3NmMwLTAuMjU1LDAuMi0wLjQ1MiwwLjQ1Ni0wLjQ1MmgxLjk4OGMwLjI0OCwwLDAuNDUyLDAuMTk2LDAuNDUyLDAuNDUydjE3Ljg4NgljMCwzLjExMi0xLjY5Nyw0LjktNC42NDgsNC45Yy0wLjkwOCwwLTEuNjIzLDAtMy42MTktMC45ODJsLTQuMTE4LTIuMzczQzUuNjI5LDM1LjMxNyw1LDM0LjIxNiw1LDMzLjA0MlYxNC45MjgJYzAtMS4xNzksMC42MjktMi4yNzksMS42NDYtMi44NjFMMjIuMzYsMy4wMDJjMC45OTQtMC41NjIsMi4zMTQtMC41NjIsMy4zMDEsMGwxNS42OTQsOS4wNjlDNDIuMzY3LDEyLjY1Niw0MywxMy43NTMsNDMsMTQuOTMyCXYxOC4xMTRjMCwxLjE3NS0wLjYzMywyLjI3MS0xLjY0NiwyLjg2MUwyNS42Niw0NC45NzFjLTAuNTAzLDAuMjkxLTEuMDczLDAuNDQtMS42NTQsMC40NCI+PC9wYXRoPjxwYXRoIGZpbGw9IiMyMWEzNjYiIGQ9Ik0yOC44NTYsMzIuOTM3Yy02Ljg2OCwwLTguMzA4LTMuMTUzLTguMzA4LTUuNzk3YzAtMC4yNTEsMC4yMDMtMC40NTIsMC40NTUtMC40NTJoMi4wMjgJYzAuMjI0LDAsMC40MTMsMC4xNjMsMC40NDgsMC4zODRjMC4zMDYsMi4wNjYsMS4yMTgsMy4xMDgsNS4zNzEsMy4xMDhjMy4zMDgsMCw0LjcxNS0wLjc0Nyw0LjcxNS0yLjUwMgljMC0xLjAxLTAuNDAxLTEuNzYtNS41NC0yLjI2M2MtNC4yOTktMC40MjQtNi45NTUtMS4zNzEtNi45NTUtNC44MDljMC0zLjE2NywyLjY3Mi01LjA1Myw3LjE0Ny01LjA1MwljNS4wMjYsMCw3LjUxNywxLjc0NSw3LjgzMSw1LjQ5M2MwLjAxMiwwLjEzLTAuMDM1LDAuMjU1LTAuMTIyLDAuMzVjLTAuMDg2LDAuMDktMC4yMDgsMC4xNDUtMC4zMzQsMC4xNDVoLTIuMDM5CWMtMC4yMTIsMC0wLjM5Ny0wLjE0OS0wLjQ0LTAuMzU0Yy0wLjQ5MS0yLjE3My0xLjY3OC0yLjg2OC00LjkwNC0yLjg2OGMtMy42MTEsMC00LjAzMSwxLjI1Ny00LjAzMSwyLjIJYzAsMS4xNDMsMC40OTUsMS40NzcsNS4zNjcsMi4xMjJjNC44MjUsMC42NCw3LjExNiwxLjU0NCw3LjExNiw0LjkzNWMwLDMuNDE4LTIuODUzLDUuMzc5LTcuODI3LDUuMzc5Ij48L3BhdGg+Cjwvc3ZnPg=="},
         {name:"Express", src:"https://www.vectorlogo.zone/logos/expressjs/expressjs-ar21.svg"},
         {name:"Sequelize", src:"https://www.vectorlogo.zone/logos/sequelizejs/sequelizejs-icon.svg"},
@@ -49,25 +51,25 @@ export default function Skills() {
                 </p>
                 <div className=" grid grid-cols-1 lg:grid-cols-3 ">
                         <div className="text-center my-10 lg:mr-5 lg:my-0 grid lg:col-span-2 ">
-                          <p className="font-sans text-xl font-bold tracking-width pb-8  text-amber-400 sm:text-3xl">
+                          <p className=" animate__animated animate__fadeIn font-sans text-xl font-bold tracking-width pb-8  text-amber-400 sm:text-3xl">
                             Technologies
                           </p>
-                          <div className="grid grid-cols-2 gap-x-6 gap-y-4 content-center place-content-center">
+                          <div className="grid grid-cols-2 xl:gap-x-6 gap-x-2 gap-y-4 content-center place-content-center">
                             {tecs.map(t=>
-                            <div className="grid grid-cols-5 gap-x-4 rounded-full  bg-white border-teal-400 border-solid border-2 px-6 text-base font-semibold leading-10 shadow-sm">
-                                <img src={t.src} alt="img" className="h-12 col-span-2"/>
+                            <div className="animate__animated animate__fadeIn hover:animate-pulse hover:ease-in-out grid grid-cols-5 gap-x-4  rounded-full  bg-white border-teal-400 border-solid border-2 px-3 xl:px-6 text-sm font-semibold leading-10 shadow-sm">
+                                <img src={t.src} alt="img" className="xl:h-12 h-8 col-span-2"/>
                                 <h6 className="text-teal-700 text-center grid content-center place-content-center col-span-3">{t.name}</h6>  
                             </div>)}
                           </div>
                         </div>
 
-                        <div className="text-center lg:pl-1 lg:mx-0  lg:my-0  border-l-2 border-teal-400  ">
-                        <p className="font-sans text-xl font-bold tracking-width pb-8  text-amber-400 sm:text-3xl">
+                        <div className="text-center lg:pl-1 lg:mx-0  lg:my-0  xl:border-l-2 xl:border-teal-400  ">
+                        <p className="animate__animated animate__fadeIn font-sans text-xl font-bold tracking-width pb-8  text-amber-400 sm:text-3xl">
                             Others
                           </p>
                           <div className="grid content-center gap-y-4 gap-x-1 place-content-center ">
                             {others.map(t=>
-                            <div className="grid grid-cols-5  rounded-full  bg-white border-teal-400 border-solid border-2 px-6 text-base font-semibold leading-10 shadow-sm">
+                            <div className="animate__animated animate__fadeIn hover:animate-pulse hover:ease-in-out grid grid-cols-5  rounded-full  bg-white border-teal-400 border-solid border-2 px-6 text-sm font-semibold leading-10 shadow-sm">
                                 <img src={t.src} alt="img" className="h-12 col-span-1"/>
                                 <h6 className="text-teal-700 text-center grid content-center place-content-center col-span-4">{t.name}</h6>  
                             </div>)}
@@ -76,6 +78,7 @@ export default function Skills() {
     
                 </div>
           </div>
+          <div className="fixed bottom-0 right-0"><ChatIngles /></div>
         </div>):
         (<div class="bg-[url('/public/bg-portfolio.png')] lg:h-screen h-full w-full bg-cover bg-center">   
          <div className="flex justify-end xl:justify-start ">
@@ -90,25 +93,25 @@ export default function Skills() {
                   </p>
                   <div className=" grid grid-cols-1 lg:grid-cols-3 ">
                           <div className="text-center my-10 lg:mr-5 lg:my-0 grid lg:col-span-2 ">
-                            <p className="font-sans text-xl font-bold tracking-width pb-8  text-amber-400 sm:text-3xl">
+                            <p className="animate__animated animate__fadeIn font-sans text-xl font-bold tracking-width pb-8  text-amber-400 sm:text-3xl">
                               Tecnologías
                             </p>
-                            <div className="grid grid-cols-2 gap-x-6 gap-y-4 content-center place-content-center">
+                            <div className="grid grid-cols-2 xl:gap-x-6 gap-x-2 gap-y-4 content-center place-content-center">
                               {tecs.map(t=>
-                              <div className="grid grid-cols-5 gap-x-4 rounded-full  bg-white border-teal-400 border-solid border-2 px-6 text-base font-semibold leading-10 shadow-sm">
-                                  <img src={t.src} alt="img" className="h-12 col-span-2"/>
+                              <div className="animate__animated animate__fadeIn hover:animate-pulse hover:ease-in-out grid grid-cols-5 gap-x-4  rounded-full  bg-white border-teal-400 border-solid border-2 px-3 xl:px-6 text-sm font-semibold leading-10 shadow-sm">
+                                  <img src={t.src} alt="img" className="xl:h-12 h-8 col-span-2"/>
                                   <h6 className="text-teal-700 text-center grid content-center place-content-center col-span-3">{t.name}</h6>  
                               </div>)}
                             </div>
                           </div>
   
-                          <div className="text-center lg:pl-1 lg:mx-0  lg:my-0  border-l-2 border-teal-400  ">
-                          <p className="font-sans text-xl font-bold tracking-width pb-8  text-amber-400 sm:text-3xl">
+                          <div className="text-center lg:pl-1 lg:mx-0  lg:my-0  xl:border-l-2 xl:border-teal-400  ">
+                          <p className="animate__animated animate__fadeIn font-sans text-xl font-bold tracking-width pb-8  text-amber-400 sm:text-3xl">
                               Otros
                             </p>
                             <div className="grid content-center gap-y-4 gap-x-1 place-content-center ">
                               {others.map(t=>
-                              <div className="grid grid-cols-5  rounded-full  bg-white border-teal-400 border-solid border-2 px-6 text-base font-semibold leading-10 shadow-sm">
+                              <div className="animate__animated animate__fadeIn hover:animate-pulse hover:ease-in-out grid grid-cols-5  rounded-full  bg-white border-teal-400 border-solid border-2 px-6 text-base font-semibold leading-10 shadow-sm">
                                   <img src={t.src} alt="img" className="h-12 col-span-1"/>
                                   <h6 className="text-teal-700 text-center grid content-center place-content-center col-span-4">{t.name}</h6>  
                               </div>)}
@@ -117,6 +120,7 @@ export default function Skills() {
       
                   </div>
             </div>
+            <div className="fixed bottom-0 right-0"><Chat /></div>
           </div>)
         
 }

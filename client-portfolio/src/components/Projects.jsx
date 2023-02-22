@@ -3,6 +3,8 @@ import NavBar from "./NavBar"
 import { useState, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import Card from "./Card_project";
+import Chat from "./Chat";
+import ChatIngles from "./ChatIngles";
 
 
 function classNames(...classes) {
@@ -29,7 +31,7 @@ export default function Projects() {
       "📚 Diferentes dashboards de usuarios",
       "📊 Sección de estadísticas para el administrador",
       "📱 Diseño responsive"], deploy:"https://campy-frontend.vercel.app/", repofront:"https://github.com/VirJuarez/Campy-frontend", repoback:"https://github.com/VirJuarez/Campy-backend"},
-      {name:"FOOD APP",fecha:"Noviembre 2022", resumen:"Página de recetas para todo tipo de dietas", imagen:"/HOME-FOODAPP.png", tecno:["Javascript", "React", "Redux", "CSS plano", "Node.js", "Express", "Sequelize", "PostgreSQL"], 
+      {name:"FOODAPP",fecha:"Noviembre 2022", resumen:"Página de recetas para todo tipo de dietas", imagen:"/HOME-FOODAPP.png", tecno:["Javascript", "React", "Redux", "CSS plano", "Node.js", "Express", "Sequelize", "PostgreSQL"], 
       descripcion:["🛬 Página de inicio",
       "⏳ Loading", 
       "🔍 Buscador de recetas", 
@@ -51,7 +53,7 @@ export default function Projects() {
       "📚 Different dashboards for users",
       "📊 Statistic section for the administrator",
       "📱 Responsive design"], deploy:"https://campy-frontend.vercel.app/", repofront:"https://github.com/VirJuarez/Campy-frontend", repoback:"https://github.com/VirJuarez/Campy-backend"},
-      {name:"FOOD APP",fecha:"November 2022", resumen:"Página de recetas para todo tipo de dietas", imagen:"/HOME-FOODAPP.png", tecno:["Javascript", "React", "Redux", "plain CSS", "Node.js", "Express", "Sequelize", "PostgreSQL"], 
+      {name:"FOODAPP",fecha:"November 2022", resumen:"Página de recetas para todo tipo de dietas", imagen:"/HOME-FOODAPP.png", tecno:["Javascript", "React", "Redux", "plain CSS", "Node.js", "Express", "Sequelize", "PostgreSQL"], 
       descripcion:["🛬 Landing Page",
       "⏳ Loading", 
       "🔍 Search bar for recipes", 
@@ -71,19 +73,19 @@ export default function Projects() {
   },[english, n]);
     
     return(
-        <div class="bg-[url('/public/bg-portfolio.png')] min-h-screen lg:h-screen h-full w-full bg-cover bg-center">
+        <div class="bg-[url('/public/bg-portfolio.png')] lg:h-screen h-full w-full bg-cover bg-center">
            <div className="flex justify-end xl:justify-start ">
       <img src="/VJ_logo2.svg" alt="img" className="xl:w-40 fixed xl:mt-5 xl:ml-5 w-10 mr-3 xl:mr-0 mt-3"/> 
     </div>
             
             <NavBar />
-            <div className=" border-teal-300 border-solid border-2 backdrop-blur px-6 lg:px-8 mx-4 md:mx-48 py-5 md:py-15  my-1 lg:my-0  min-w-fit ">
+            <div className=" border-teal-300 border-solid border-2 backdrop-blur px-6 lg:px-8 mx-4 md:mx-48 py-5 md:py-15  my-1 lg:my-0  grid content-center place-content-center">
 
       
 
 
-        <div className=" flex flex-row">
-          <div className="flex items-center">
+        <div className="flex flex-row max-w-min xl:max-w-none" >
+          <div className="flex xl:items-center items-start pt-4 xl:pt-0">
         <svg
             xmlns="http://www.w3.org/2000/svg"
             className={classNames(
@@ -109,7 +111,7 @@ export default function Projects() {
           {english? <Card name={projects[n].name} fecha={projects[n].fecha} resumen={projects[n].resumen} repofront={projects[n].repofront} repoback={projects[n].repoback} imagen={projects[n].imagen} deploy={projects[n].deploy} tecno={projects[n].tecno} descripcion={projects[n].descripcion}></Card>
           :<Card name={proyectos[n].name} fecha={proyectos[n].fecha} resumen={proyectos[n].resumen} repofront={proyectos[n].repofront} repoback={proyectos[n].repoback} imagen={proyectos[n].imagen} deploy={proyectos[n].deploy} tecno={proyectos[n].tecno} descripcion={proyectos[n].descripcion}></Card>
           }
-          <div className="flex items-center" >
+          <div className="flex xl:items-center items-start pt-4 xl:pt-0" >
           <svg
             xmlns="http://www.w3.org/2000/svg"
             className={classNames(
@@ -140,6 +142,6 @@ export default function Projects() {
         </div>
 
       </div>
-
+      {english? <div className="fixed bottom-0 right-0"><ChatIngles/></div>:<div className="fixed bottom-0 right-0"><Chat /></div>}
         </div>)
 }

@@ -2,6 +2,8 @@ import React from "react";
 import NavBar from "./NavBar"
 import { useState, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
+import Chat from "./Chat";
+import ChatIngles from "./ChatIngles";
 
 
 export default function AboutMe() {
@@ -32,16 +34,16 @@ return english?(
                               Hello! I am Virginia Juarez
                             </p>
                             <div className="">
-                            <p className="font-sans text-md my-6 tracking-width py-2  sm:text-lg rounded-full  bg-white border-teal-400 border-solid border-2 px-6 text-base  shadow-sm" >
+                            <p className="animate__animated animate__zoomIn font-sans text-md my-6 tracking-width py-2  sm:text-lg rounded-full  bg-white border-teal-400 border-solid border-2 px-6 text-sm  shadow-sm" >
                                Before starting in the IT sector, I got a <strong>Bachelor´s degree in Chemistry</strong>, and I worked in the research area.
                             </p>
-                            <p className="font-sans text-md my-6 tracking-width py-2  sm:text-lg rounded-full  bg-white border-teal-400 border-solid border-2 px-6 text-base  shadow-sm">
+                            <p className="animate__animated animate__zoomIn animate__delay-1s font-sans text-md my-6 tracking-width py-2  sm:text-lg rounded-full  bg-white border-teal-400 border-solid border-2 px-6 text-sm  shadow-sm">
                               I graduated as a <strong>Full Stack Developer</strong> from Henry Bootcamp. I like to have new problems and challenges to solve daily.
                             </p>
-                            <p className="font-sans text-md my-6 tracking-width py-2  sm:text-lg rounded-full  bg-white border-teal-400 border-solid border-2 px-6 text-base  shadow-sm">
+                            <p className="animate__animated animate__zoomIn animate__delay-2s font-sans text-md my-6 tracking-width py-2  sm:text-lg rounded-full  bg-white border-teal-400 border-solid border-2 px-6 text-sm shadow-sm">
                               Regarding my <strong>soft skills</strong>, I consider myself a reliable, dedicated, curious person who learns quickly. 
                             </p>
-                            <p className="font-sans text-md my-6 tracking-width py-2  sm:text-lg rounded-full  bg-white border-teal-400 border-solid border-2 px-6 text-base  shadow-sm">
+                            <p className="animate__animated animate__zoomIn animate__delay-3s font-sans text-md my-6 tracking-width py-2  sm:text-lg rounded-full  bg-white border-teal-400 border-solid border-2 px-6 text-sm  shadow-sm">
                               Currently, I am looking for <strong>my first job on IT</strong>. I want a job which let me continue learning and improving my skills.
                             </p>
                             
@@ -52,12 +54,14 @@ return english?(
                           className="rounded-full  bg-teal-700 border-teal-400 border-solid border-2 px-3.5 py-1.5 text-base font-semibold leading-7 text-white shadow-sm hover:bg-amber-400 hover:border-amber-400"
                         >Download CV</a>
                       </div>
+                      
               </div>
 
-              
+            
                 
-
+            
               </div> 
+              <div className="fixed bottom-0 right-0"><ChatIngles /></div>
          
      
   </div>):
@@ -81,16 +85,16 @@ return english?(
                           Hola! Soy Virginia Juarez
                         </p>
                         <div className="">
-                        <p className="font-sans text-md my-6 tracking-width py-2  sm:text-lg rounded-full  bg-white border-teal-400 border-solid border-2 px-6 text-base   shadow-sm" >
+                        <p className="animate__animated animate__zoomIn font-sans text-md my-6 tracking-width py-2  sm:text-lg rounded-full  bg-white border-teal-400 border-solid border-2 px-6 text-sm  shadow-sm" >
                           Antes de entrar en el mundo de la programación, me recibí como <strong>Licenciada en Química</strong>, y me desempeñaba en el área de investigación.
                         </p>
-                        <p className="font-sans text-md my-6 tracking-width py-2  sm:text-lg rounded-full  bg-white border-teal-400 border-solid border-2 px-6 text-base shadow-sm">
+                        <p className="animate__animated animate__zoomIn animate__delay-1s font-sans text-md my-6 tracking-width py-2  sm:text-lg rounded-full  bg-white border-teal-400 border-solid border-2 px-6 text-sm shadow-sm">
                           Me gradué como <strong>Desarrolladora Full Stack</strong> en el Bootcamp de Henry. Me gusta tener a diario nuevos problemas y desafíos que resolver.
                         </p>
-                        <p className="font-sans text-md my-6 tracking-width py-2  sm:text-lg rounded-full  bg-white border-teal-400 border-solid border-2 px-6 text-base  shadow-sm">
+                        <p className="animate__animated animate__zoomIn animate__delay-2s font-sans text-md my-6 tracking-width py-2  sm:text-lg rounded-full  bg-white border-teal-400 border-solid border-2 px-6 text-sm shadow-sm">
                           En cuanto a mis <strong>habilidades blandas</strong>, me considero una persona responsable, dedicada, curiosa y que aprende rápidamente. 
                         </p>
-                        <p className="font-sans text-md my-6 tracking-width py-2  sm:text-lg rounded-full  bg-white border-teal-400 border-solid border-2 px-6 text-base   shadow-sm">
+                        <p className="animate__animated animate__zoomIn animate__delay-3s font-sans  my-6 tracking-width py-2  sm:text-lg rounded-full  bg-white border-teal-400 border-solid border-2 px-6 text-sm   shadow-sm">
                           Actualmente, estoy buscando <strong>mi primer empleo en IT</strong>. Quiero un empleo que me permita seguir adquiriendo y perfeccionando conocimientos.
                         </p>
                         
@@ -109,7 +113,7 @@ return english?(
   
                 </div> 
            
-       
+                <div className="fixed bottom-0 right-0"><Chat /></div>
     </div>)
 }
 
