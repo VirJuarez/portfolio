@@ -36,7 +36,7 @@ export default function ChatIngles (){
         const {classifications}=await fetch('https://api.cohere.ai/classify',{
             method: "POST",
             headers:{
-                Authorization: `BEARER 0T7mHJ5T1xtBCtn8bKTKmbrLCT30kYMp78cuUR55`,
+                Authorization: process.env.CHAT_APIKEY,
                 "Content-Type": "application/json",
             },
             body:JSON.stringify({
@@ -66,7 +66,7 @@ export default function ChatIngles (){
                 </div>)}
             </div>
             <form className="m-auto flex justify-around items-center">
-                <input value={question} onChange={handleChange} className="border-2 rounded-full border-slate-400 border-solid bg-slate-300 p-2 w-5/6"></input>
+                <input placeholder="Ask a question" value={question} onChange={handleChange} className="border-2 rounded-full border-slate-400 border-solid bg-slate-300 p-2 w-5/6"></input>
                 <button disabled={loading} className={`border-solid border-1 border-teal-900 py-2 px-2 rounded-full text-white ${loading ? "bg-amber-400" : "bg-teal-500"}`} onClick={(e)=>handleSubmit(e)}><img className="h-7  w-7"src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAACXBIWXMAAAsTAAALEwEAmpwYAAADkElEQVR4nO2ZXYhNURTHf3eGwZgQYeQjkikfDfKADC+DPJgyD1PyQEmSaJqSlEJReFCkRpNiUlIySsrXhGKESAo1D4zI55CPMGIw2rVurW77zj1n7j337nPv+dWue8/e+5zz3/vstddeCyIiIiIiIiLyiIFAJRCjgOgHLAOagS9AD7CHPKcIWAg0Ap0iWpcj5CnTgV3AM4toXZaQR0wT0e0pRMdLpyyLUDMeqAfaLAL/yvVtwCNL/WFCyhgRfRv4ZxF2F2gAxgKlwHVV91v9riJEDANWA+eBbovoJ/L5V6g+RvxV1eYycE9+vwzDFjgIqAFOA78sol8Ah4A5lr428VNkWZj/+3GUASL6BPDNIvqViK7qZQZt4o3js0Vdm41DFIugJuWg6PJJBqTGg9VOJt5wX66ZXcIJB6VKZvOdRXSXfPpGdInHe/YmfrK6bmyFkw7KTzFyxtgN9nnf3sQbdqg64y8446D8kb16PTCkj/dPJd7wWOoekCUmeHBQTP3oNJ/jRfxMVb+VABkhM9mWxEGJ79WTMvQ8L+INe6XevNNEMkwJsE5e5I9FtHFBt4sRyiRG/DX1nItJxJutskPa3CIAmiyin8o5e0YQD/Qh3jBPtdscxMvsThD/AaglOPyINxxUxrY8iBeKAXUy63og7gCLMvwsr2te+xqvpW0rAdNfDOD7hIFozdBS8CveUK3aryVLlIml71IP7xZbUZ5F8Yaj0t4cpIaTZcaJaL0zfAf2+XR4+irefJEfpc85cshU8ekTDWV9mgebVCxX/VbiANXqNBYv7WJAYxkWbzgp/X7IsnSCmMcdI13xpSqWcApHgx4Nao3G3dQzwCyf+7yNOtV/BQ5TZtkxetKY+Thnpf9nGexQhLabVbzOlJt9FD9U4grmHscIGZXAW3n5jj7O3ho1iEsJIRuUAGMn/HIp7FmfYokbxIOhfjy4kSpnENqsD3KajH8FxnP0ykbVbwEhp00FSk14zQs3wpT1ScVcFVY77nEncT7r45cWFURNlclxNuuTDhUqm3shRVunsj6ZpFHN7OIkbZzJ+gTBKOCriHsoYa5Ecpr1yQY7lcBVlvqsZ31ycWh6IyKfJ7jIWcv6uOoiB5r1cd1Fjqmsj3Gc8p7aBBd5vvq/iQKhTQR3SQQp0KyP6y5yj5QrFBgtCQOQtayPiy5yTrI+LnBABsDEEguSIsk62VzjiIiIiIiICDLGfzNtq74XrTteAAAAAElFTkSuQmCC"></img></button>
             </form>
         </div>
