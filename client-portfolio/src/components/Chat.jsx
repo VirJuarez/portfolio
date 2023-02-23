@@ -37,7 +37,7 @@ export default function Chat (){
         const {classifications}=await fetch('https://api.cohere.ai/classify',{
             method: "POST",
             headers:{
-                Authorization: process.env.CHAT_APIKEY,
+                Authorization: `BEARER 0T7mHJ5T1xtBCtn8bKTKmbrLCT30kYMp78cuUR55`,
                 "Content-Type": "application/json",
             },
             body:JSON.stringify({
