@@ -28,7 +28,7 @@ import ChatIngles from "./ChatIngles";
             <div class="bg-[url('/public/bg-portfolio.png')] min-h-screen  w-full bg-cover bg-center static">
 
                 <div className="px-6 lg:px-8 ">
-                  <div className="mx-auto max-w-fit ">
+                  <div className="mx-auto max-w-fit my-auto">
                             
                       <div className="flex flex-col text-center content-center">
                         <p className="animate__animated animate__zoomIn font-sans text-xl font-bold pb-10 pt-36 tracking-tight text-white md:text-7xl">
@@ -69,7 +69,7 @@ import ChatIngles from "./ChatIngles";
                       </div>
                      
                   </div>
-                  <div className="absolute bottom-0 right-0"><ChatIngles /></div>
+                  <div className="fixed bottom-0 right-0"><ChatIngles /></div>
                   
                 </div>  
                
@@ -119,7 +119,7 @@ import ChatIngles from "./ChatIngles";
                   </div>
                   
               </div>
-              <div className="absolute bottom-0 right-0"><Chat /></div>
+              <div className="fixed bottom-0 right-0"><Chat /></div>
             </div>  
            
         </div>)

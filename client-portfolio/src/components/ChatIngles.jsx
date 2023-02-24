@@ -10,7 +10,7 @@ export default function ChatIngles (){
     const [open, setOpen]=useState(false);
     const [question, setQuestion]=useState("");
     const [loading, setLoading]=useState(true);
-    const [message, setMessage]=useState([{id:"1", text: "Hello, I am a bot created with AI. I can answer you some questions about Virginia.", type:"bot"}, {id:"2", text: "If the answer is´nt what you expected, please, try to paraphrase your question.", type:"bot"}])
+    const [message, setMessage]=useState([{id:"1", text: "Hello, I am a bot created with AI. I can answer you some questions about Virginia.", type:"bot"}, {id:"2", text: "If the answer isn´t what you expected, please, try to paraphrase your question.", type:"bot"}])
     
     const handleChange=(e)=>{
         setQuestion(e.target.value)
@@ -21,8 +21,11 @@ export default function ChatIngles (){
     const rtas={
         presentacion:(<p> Hello! mi name is Virginia Juarez, I am a Full Stack Developer graduated from Henry´s bootcamp.<Link className="underline" to={`/about`}>HERE</Link> you will find more information about me.</p>), 
         contacto:(<p>Currently, I am looking for my first job on IT. Yo can download my CV <a className="underline" href="./CV_VirginiaJuarez_2023_english.pdf" download="CV_JUAREZ_MV_ENGLISH.pdf">HERE</a>. Also, you can contact me directly by <a className="underline" href="mailto:virginia.juarez1996@gmail.com">Mail</a>, <a className="underline" href="https://walink.co/855b8f">WhatApp</a> or <a className="underline" href="https://www.linkedin.com/in/maria-virginia-juarez/">LinkedIn</a></p>),
-        tecnologias:(<p>I am most confortable with the PERN stack, but of course, I am open to learn new skills. You can see all the technologies I have worked with <Link className="underline" to={`/skills`}>HERE</Link></p>), 
-        laboral:(<p>I don´t have professional experience in IT at the moment. However, I have developed some projects (apart from this portfolio) which are detailed<Link className="underline" to={`/projects`}>HERE</Link> </p>) }
+        tecnologia:(<p>I am most confortable with the PERN stack, but of course, I am open to learn new skills. You can see all the technologies I have worked with <Link className="underline" to={`/skills`}>HERE</Link></p>), 
+        laboral:(<p>I don´t have professional experience in IT at the moment. However, I have developed some projects (apart from this portfolio) which are detailed<Link className="underline" to={`/projects`}>HERE</Link> </p>),
+        soft:(<p> I am a reliable, curious person with logical thinking. I like to work in a collaborative way</p>), 
+        pai:(<p>I am from Argentine. I live in Buenos Aires</p>), 
+        ingles:(<p>I speak spanish (mother tongue) and english (C1 level). I would love to learn more languages. </p>),  }
 
     async function handleSubmit(e){
         e.preventDefault();
@@ -31,7 +34,7 @@ export default function ChatIngles (){
         setMessage((message)=>message.concat({id:String(Date.now()),type:"user", text: question}))
         setQuestion("")
 
-        const ejemplos=[{"label": "presentacion", "text": "Hola"}, {"label": "presentacion", "text": "Quien sos?"}, {"label": "laboral", "text": "Cuanta experiencia tenes?"}, {"label": "laboral", "text": "Experiencia laboral"}, {"label": "tecnologias ", "text": "Con que tecnologias trabajas?"}, {"label": "tecnologias ", "text": "React, Javascript, Typescript, Node, SQL"}, {"label": "presentacion", "text": "Donde estudiaste?"}, {"label": "contacto", "text": "Estas buscando trabajo?"}, {"label": "contacto", "text": "Como te contacto?"}, {"label": "contacto", "text": "Por que medio puedo contactarte?"}, {"label": "laboral", "text": "Donde trabajaste?"}, {"label": "tecnologias ", "text": "Next, .NET, Nest, Vue, Angular, Vite, Bootstrap, chakra"}, {"label": "contacto", "text": "Descargar cv"}, {"label": "contacto", "text": "Puedo ver tu cv?"}, {"label": "laboral", "text": "Donde trabajas actualmente?"}, {"label": "contacto", "text": "expectativa salarial"}, {"label": "contacto", "text": "cual es tu rango salarial pretendido?"}, {"label": "tecnologias ", "text": "Qué stack manejas?"}, {"label": "contacto", "text": "redes sociales"}, {"label": "presentacion", "text": "idiomas"}, {"label": "presentacion", "text": "hablas ingles?"}, {"label": "laboral", "text": "que proyectos realizaste?"}, {"label": "laboral", "text": "tus proyectos"}, {"label": "contacto", "text": "tengo una oferta laboral"}, {"label": "contacto", "text": "curriculum"}, {"label": "tecnologias ", "text": "base de datos, frameworks, librerias, leguajes"}]
+        const ejemplos=[{"label": "soft", "text": "Hola"}, {"label": "presentacion", "text": "Quien sos?"}, {"label": "laboral", "text": "Cuanta experiencia tenes?"}, {"label": "laboral", "text": "Experiencia laboral"}, {"label": "tecnologia", "text": "Con que tecnologias trabajas?"}, {"label": "tecnologia", "text": "React, Javascript, Typescript, Node, SQL"}, {"label": "presentacion", "text": "Donde estudiaste?"}, {"label": "contacto", "text": "Estas buscando trabajo?"}, {"label": "contacto", "text": "Como te contacto?"}, {"label": "contacto", "text": "Por que medio puedo contactarte?"}, {"label": "laboral", "text": "Donde trabajaste?"}, {"label": "contacto", "text": "Descargar cv"}, {"label": "contacto", "text": "Puedo ver tu cv?"}, {"label": "laboral", "text": "Donde trabajas actualmente?"}, {"label": "contacto", "text": "expectativa salarial"}, {"label": "contacto", "text": "cual es tu rango salarial pretendido?"}, {"label": "tecnologia", "text": "Qué stack manejas?"}, {"label": "contacto", "text": "redes sociales"}, {"label": "ingles", "text": "idiomas"}, {"label": "ingles", "text": "hablas ingles?"}, {"label": "laboral", "text": "que proyectos realizaste?"}, {"label": "laboral", "text": "tus proyectos"}, {"label": "contacto", "text": "tengo una oferta laboral"}, {"label": "contacto", "text": "curriculum"}, {"label": "tecnologia", "text": "base de datos, frameworks, librerias, lenguajes"}, {"label": "pai", "text": "de que nacionalidad eres?"}, {"label": "pai", "text": "en donde vives?"}, {"label": "pai", "text": "en pais vives?"}, {"label": "pai", "text": "residencia?"}, {"label": "presentacion", "text": "qué titulo tenes?"}, {"label": "soft", "text": "cuales son tus habilidades blandas?"}, {"label": "soft", "text": "soft skills"}]
 
         const {classifications}=await fetch('https://api.cohere.ai/classify',{
             method: "POST",
@@ -54,7 +57,7 @@ export default function ChatIngles (){
     },[message, open, question]);
 
     return open? (
-        <div className="border-solid border-teal-900 border-2 rounded-md w-[350px] p-1 bg-neutral-200 mb-3 mr-3">
+        <div className="border-solid border-teal-900 border-2 rounded-md w-[300px] xl:w-[350px] p-1 bg-neutral-200 lg:mb-3 lg:mr-3 mb-1 mr-1">
             <div className="flex justify-end">
             <button  onClick={()=>setOpen(false)} className="rounded-full flex justify-center items-center bg-teal-900 text-white w-5 h-5 ">x</button>
             </div>

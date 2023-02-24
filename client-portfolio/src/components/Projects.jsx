@@ -73,7 +73,7 @@ export default function Projects() {
   },[english, n]);
     
     return(
-        <div class="bg-[url('/public/bg-portfolio.png')] lg:h-screen h-full w-full bg-cover bg-center">
+        <div class="bg-[url('/public/bg-portfolio.png')] min-h-screen h-full w-full bg-cover bg-center">
            <div className="flex justify-end xl:justify-start ">
       <img src="/VJ_logo2.svg" alt="img" className="xl:w-40 fixed xl:mt-5 xl:ml-5 w-10 mr-3 xl:mr-0 mt-3"/> 
     </div>

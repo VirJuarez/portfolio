@@ -21,7 +21,7 @@ export default function ContactMe() {
     ]
     
     return english?(
-    <div class="bg-[url('/public/bg-portfolio.png')] lg:h-screen h-full w-full bg-cover bg-center">
+    <div class="bg-[url('/public/bg-portfolio.png')] min-h-screen h-full w-full bg-cover bg-center">
          <div className="flex justify-end xl:justify-start ">
       <img src="/VJ_logo2.svg" alt="img" className="xl:w-40 fixed xl:mt-5 xl:ml-5 w-10 mr-3 xl:mr-0 mt-3"/> 
     </div>
@@ -35,7 +35,7 @@ export default function ContactMe() {
                     <div className="grid grid-cols-2 gap-y-10 lg:grid-cols-4 gap-x-20 lg:gap-x-40  ">
                         {contact.map(c=>
                         <div key={c.name} >
-                        <a href={c.href} className="grid content-center place-content-center animate__animated animate__swing hover:animate-waving-hand">
+                        <a href={c.href} className="grid content-center place-content-center animate__animated animate__swing hover:animate-waving-hand" target="_blank">
                           <img src={c.logo} alt={c.name} className="h-16"/>
                         </a>
                         </div>)}
@@ -57,7 +57,7 @@ export default function ContactMe() {
                 <div className="fixed bottom-0 right-0"><ChatIngles /></div>
     </div>):
     (
-        <div class="bg-[url('/public/bg-portfolio.png')] lg:h-screen h-full w-full bg-cover bg-center">
+        <div class="bg-[url('/public/bg-portfolio.png')] min-h-screen h-full w-full bg-cover bg-center">
              <div className="flex justify-end xl:justify-start ">
       <img src="/VJ_logo2.svg" alt="img" className="xl:w-40 fixed xl:mt-5 xl:ml-5 w-10 mr-3 xl:mr-0 mt-3"/> 
     </div>
@@ -70,7 +70,7 @@ export default function ContactMe() {
                         <div className="grid grid-cols-2 gap-y-10 lg:grid-cols-4 gap-x-20 lg:gap-x-40  ">
                             {contact.map(c=>
                             <div key={c.name} >
-                            <a href={c.href} className="grid content-center place-content-center hover:animate-waving-hand">
+                            <a href={c.href} target="_blank" className="grid content-center place-content-center animate__animated animate__swing hover:animate-waving-hand">
                               <img src={c.logo} alt={c.name} className="h-16"/>
                             </a>
                             </div>)}
