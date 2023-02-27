@@ -16,13 +16,13 @@ return english?(
         <div className="grid xl:col-span-2">
             <img src={props.imagen} alt="imagen" className="flex justify-center w-[400px] xl:w-[650px] rounded-xl"></img>
             <div className="py-1 my-4 flex justify-around gap-x-2">
-            <a href={props.deploy}
+            <a href={props.deploy} target="_blank"
             className=" h-fit rounded-full text-center bg-teal-700 border-teal-400 border-solid border-2 px-3 py-1.5 text-xs xl:text-base font-semibold leading-7 text-white shadow-sm hover:bg-amber-400 hover:border-amber-400"
             >Go to {props.name}</a>
-            <a href={props.repofront}
+            <a href={props.repofront} target="_blank"
             className=" h-fit rounded-full  text-center bg-teal-700 border-teal-400 border-solid border-2 px-3 py-1.5 text-xs xl:text-base font-semibold leading-7 text-white shadow-sm hover:bg-amber-400 hover:border-amber-400"
             >Repository FRONT</a>
-            <a href={props.repoback}
+            <a href={props.repoback} target="_blank"
             className=" h-fit rounded-full text-center bg-teal-700 border-teal-400 border-solid border-2 px-3 py-1.5 text-xs xl:text-base font-semibold leading-7 text-white shadow-sm hover:bg-amber-400 hover:border-amber-400"
             >Repository BACK</a>
             </div>   
@@ -54,13 +54,13 @@ return english?(
         <div className="grid col-span-2">
             <img src={props.imagen} alt="imagen" className="flex justify-center w-[400px] xl:w-[650px] rounded-xl"></img>
             <div className="py-1 my-4 flex justify-around">
-            <a href={props.deploy}
+            <a href={props.deploy} target="_blank"
             className=" h-fit rounded-full text-center bg-teal-700 border-teal-400 border-solid border-2 px-3 py-1.5 text-xs xl:text-base font-semibold leading-7 text-white shadow-sm hover:bg-amber-400 hover:border-amber-400"
             >Ir a {props.name}</a>
-            <a href={props.repofront}
+            <a href={props.repofront} target="_blank"
             className=" h-fit rounded-full text-center bg-teal-700 border-teal-400 border-solid border-2 px-3 py-1.5 text-xs xl:text-base font-semibold leading-7 text-white shadow-sm hover:bg-amber-400 hover:border-amber-400"
             >Repositorio FRONT</a>
-            <a href={props.repoback}
+            <a href={props.repoback} target="_blank"
             className=" h-fit rounded-full text-center bg-teal-700 border-teal-400 border-solid border-2 px-3 py-1.5 text-xs xl:text-base font-semibold leading-7 text-white shadow-sm hover:bg-amber-400 hover:border-amber-400"
             >Repositorio BACK</a>
             </div>   

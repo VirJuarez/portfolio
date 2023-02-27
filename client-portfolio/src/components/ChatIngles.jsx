@@ -19,10 +19,10 @@ export default function ChatIngles (){
     }
 
     const rtas={
-        presentacion:(<p> Hello! mi name is Virginia Juarez, I am a Full Stack Developer graduated from Henry´s bootcamp.<Link className="underline" to={`/about`}>HERE</Link> you will find more information about me.</p>), 
+        presentacion:(<p> Hello! mi name is Virginia Juarez, I am a Full Stack Developer graduated from Henry´s bootcamp. <Link className="underline" to={`/about`}>HERE</Link> you will find more information about me.</p>), 
         contacto:(<p>Currently, I am looking for my first job on IT. Yo can download my CV <a className="underline" href="./CV_VirginiaJuarez_2023_english.pdf" download="CV_JUAREZ_MV_ENGLISH.pdf">HERE</a>. Also, you can contact me directly by <a className="underline" href="mailto:virginia.juarez1996@gmail.com">Mail</a>, <a className="underline" href="https://walink.co/855b8f">WhatApp</a> or <a className="underline" href="https://www.linkedin.com/in/maria-virginia-juarez/">LinkedIn</a></p>),
         tecnologia:(<p>I am most confortable with the PERN stack, but of course, I am open to learn new skills. You can see all the technologies I have worked with <Link className="underline" to={`/skills`}>HERE</Link></p>), 
-        laboral:(<p>I don´t have professional experience in IT at the moment. However, I have developed some projects (apart from this portfolio) which are detailed<Link className="underline" to={`/projects`}>HERE</Link> </p>),
+        laboral:(<p>I don´t have professional experience in IT at the moment. However, I have developed some projects (apart from this portfolio) which are detailed <Link className="underline" to={`/projects`}>HERE</Link> </p>),
         soft:(<p> I am a reliable, curious person with logical thinking. I like to work in a collaborative way</p>), 
         pai:(<p>I am from Argentine. I live in Buenos Aires</p>), 
         ingles:(<p>I speak spanish (mother tongue) and english (C1 level). I would love to learn more languages. </p>),  }
