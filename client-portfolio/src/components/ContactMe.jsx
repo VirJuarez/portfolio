@@ -45,7 +45,7 @@ export default function ContactMe() {
 
                     <div className="w-64 py-10 mx-auto lg:w-[500px] grid content-center place-content-center">
                      <h6 className="text-center py-5 text-white font-sans font-bold">If you like my portfolio, please, interact with my post on LinkedIn to make it more visible. Thanks!</h6>
-                     <iframe src="https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7035974142889725952" height="831" width="504" frameborder="0" allowfullscreen="" title="Embedded post"></iframe>
+                     <iframe src="https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7035974142889725952" height="831" width="504" frameborder="0" allowfullscreen="" title="Embedded post" className="w-64 lg:w-[500px] h-80 grid content-center place-content-center"></iframe>
                     </div>
 
 
@@ -80,7 +80,7 @@ export default function ContactMe() {
     
                         <div className="w-64 py-10 mx-auto lg:w-[500px] grid content-center place-content-center">
                          <h6 className="text-center py-5 text-white font-sans font-bold">Si te gusta mi portafolio, ayudame interactuando con mi posteo en LinkedIn para darle más visibilidad. Gracias!</h6>
-                         <iframe src="https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7035974142889725952" height="831" width="504" frameborder="0" allowfullscreen="" title="Embedded post"></iframe>
+                         <iframe src="https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7035974142889725952" height="831" width="504" frameborder="0" allowfullscreen="" title="Embedded post" className="w-64 lg:w-[500px] h-80 grid content-center place-content-center"></iframe>
                         </div>
     
     
