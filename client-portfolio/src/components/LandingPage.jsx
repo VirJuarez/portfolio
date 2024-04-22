@@ -44,7 +44,7 @@ import ChatIngles from "./ChatIngles";
 
                         <div className="animate__animated animate__zoomIn animate__delay-2s mt-10 flex items-center justify-center gap-x-6">
                           <a
-                            href="./CV_VirginiaJuarez_2023_english.pdf" download="CV_JUAREZ_MV_ENGLISH.pdf"
+                            href="./CV_JUAREZ_MV_ENGLISH_2024.pdf" download="CV_JUAREZ_MV_ENGLISH.pdf"
                             className="rounded-full bg-teal-700 border-teal-400 border-solid border-2 px-3.5 py-1.5 text-base font-semibold leading-7 text-white shadow-sm hover:bg-amber-400 hover:border-amber-400"
                           >
                             Download CV
@@ -93,7 +93,7 @@ import ChatIngles from "./ChatIngles";
 
                     <div className="mt-10 flex items-center justify-center gap-x-6">
                       <a
-                        href="./CV_VirginiaJuarez_2023.pdf" download="CV_JUAREZ_MV.pdf"
+                        href="./CV JUAREZ_MV_2024" download="CV_JUAREZ_MV.pdf"
                         className="rounded-full bg-teal-700 border-teal-400 border-solid border-2 px-3.5 py-1.5 text-base font-semibold leading-7 text-white shadow-sm hover:bg-amber-400 hover:border-amber-400"
                       >
                         Descargar CV
