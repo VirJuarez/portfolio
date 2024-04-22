@@ -93,7 +93,7 @@ import ChatIngles from "./ChatIngles";
 
                     <div className="mt-10 flex items-center justify-center gap-x-6">
                       <a
-                        href="./CV JUAREZ_MV_2024" download="CV_JUAREZ_MV.pdf"
+                        href="./CV_JUAREZ_MV_2024" download="CV_JUAREZ_MV.pdf"
                         className="rounded-full bg-teal-700 border-teal-400 border-solid border-2 px-3.5 py-1.5 text-base font-semibold leading-7 text-white shadow-sm hover:bg-amber-400 hover:border-amber-400"
                       >
                         Descargar CV
