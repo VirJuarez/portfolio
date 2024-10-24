@@ -21,6 +21,34 @@ export default function Projects() {
     },[english]);
 
     let proyectos = [
+      {name:"Hireheroes platform", fecha:"Septiembre 2024", resumen:"Plataforma de reclutamiento y selección ", imagen:"/HH-platform.png", tecno:["Javasript", "React", "Redux", "Tailwind CSS", "Ant Design", "Node.js", "Express", "MongoDB"], 
+        descripcion:["📚 Modificaciones respetando diseño Figma", 
+        "💻 Sección de video entrevistas",
+        "🔗 Funcionalidad de obtener links cortos para compartir",
+        "🤖 Funcionalidades IA que facilitan la experiencia de usuario",
+        "🧮 Diferentes dashboards de usuarios",
+        "📊 Sección de estadísticas según el análisis realizado con IA",
+        "📱 Diseño responsive"], deploy:"", repofront:"", repoback:""},
+
+      {name:"HireHeroes webpage", fecha:"Septiembre 2024", resumen:"Mejoras y nuevas funcionalidades en página comercial", imagen:"/HH-homepage.png", tecno:["Javasript", "React", "Next.js", "TailwindCSS" ], 
+        descripcion:["📤 Modificaciones respetando diseño Figma", 
+        "📚 Mejoras solicitadas diectamente por los founders",
+        "📱 Diseño responsive"], deploy:"https://hireheroes.ai/", repofront:"", repoback:""},
+
+      {name:"Set Sale Marine - proyecto en OneStop Software", fecha:"Septiembre 2024", resumen:"Mejoras y nuevas funcionalidades en e-commerce", imagen:"/SALE-MARINE.png", tecno:["Javasript", "React", "TailwindCSS", "Styled components", "Node.js", "Express", "MongoDB"], 
+        descripcion:[
+        "🎞️ Mejora en visualización de imágenes para mejorar experiencia del usuario",
+        "📈 Nuevas funcionalidades",
+        "🐞 Resolución de bugs encontrados",
+        "📚 Mejoras siguiendo un diseño Figma: Sell Page, Sailor Page",
+        "📱 Diseño responsive"], deploy:"https://setsalemarine.com/", repofront:"", repoback:""},
+
+      {name:"Azul Indigo", fecha:"Febrero 2024", resumen:"Página Web para emprendimiento", imagen:"/AZUL-INDIGO.png", tecno:["Javasript", "React", "Next.js", "TailwindCSS"], 
+        descripcion:[
+        "📸 Galeria de fotos",
+        "🗨️ Sección de opiniones conectado con google forms",
+        "📱 Diseño responsive"], deploy:"https://www.espacioazulindigo.com.ar/", repofront:"", repoback:""},
+
       {name:"CAMPY", fecha:"Enero 2023", resumen:"Página de reserva para campings", imagen:"/HOME-CAMPY.png", tecno:["Typesript", "React", "Redux", "Material UI", "Node.js", "Express", "Sequelize", "MySQL"], 
       descripcion:["📤 Conexión con Cloudinary", 
       "💰 Pasarela de pagos",
@@ -28,7 +56,7 @@ export default function Projects() {
       "📂 Filtros combinados complejos y mapa",
       "📧 Notificaciones por mail",
       "🤖 Bot de asistencia",
-      "📚 Diferentes dashboards de usuarios",
+      "🧮 Diferentes dashboards de usuarios",
       "📊 Sección de estadísticas para el administrador",
       "📱 Diseño responsive"], deploy:"https://campy-frontend.vercel.app/", repofront:"https://github.com/VirJuarez/Campy-frontend", repoback:"https://github.com/VirJuarez/Campy-backend"},
       {name:"FOODAPP",fecha:"Noviembre 2022", resumen:"Página de recetas para todo tipo de dietas", imagen:"/HOME-FOODAPP.png", tecno:["Javascript", "React", "Redux", "CSS plano", "Node.js", "Express", "Sequelize", "PostgreSQL"], 
@@ -43,17 +71,45 @@ export default function Projects() {
     ]
 
     let projects = [
-      {name:"CAMPY", fecha:"January 2023", resumen:"Página de reserva para campings", imagen:"/HOME-CAMPY.png", tecno:["Typesript", "React", "Redux", "Material UI", "Node.js", "Express", "Sequelize", "MySQL"], 
+      {name:"Hireheroes platform", fecha:"September 2024", resumen:"Recruitment and selection platform ", imagen:"/HH-platform.png", tecno:["Javasript", "React", "Redux", "Tailwind CSS", "Ant Design", "Node.js", "Express", "MongoDB"], 
+        descripcion:["📚 Modifications following Figma design", 
+        "💻 Video interview section",
+        "🔗 Functionality to get short links for sharing",
+        "🤖 AI features that enhance user experience",
+        "🧮 Various user dashboards",
+        "📊 Statistics section based on AI analysis",
+        "📱 Responsive design"], deploy:"", repofront:"", repoback:""},
+
+      {name:"HireHeroes webpage", fecha:"September 2024", resumen:"Improvements and new features on the commercial website", imagen:"/HH-homepage.png", tecno:["Javasript", "React", "Next.js", "TailwindCSS" ], 
+        descripcion:["📤 Modifications following Figma design", 
+        "📚 Improvements requested directly by the founders",
+        "📱 Responsive design"], deploy:"https://hireheroes.ai/", repofront:"", repoback:""},
+
+      {name:"Set Sale Marine - proyecto en OneStop Software", fecha:"September 2024", resumen:"Improvements and new features in e-commerce", imagen:"/SALE-MARINE.png", tecno:["Javasript", "React", "TailwindCSS", "Styled components", "Node.js", "Express", "MongoDB"], 
+        descripcion:[
+        "🎞️ Enhanced image display for a better user experience",
+        "📈 New features",
+        "🐞 Bug fixes",
+        "📚 Improvements following Figma design: Sell Page, Sailor Page",
+        "📱 Responsive design"], deploy:"https://setsalemarine.com/", repofront:"", repoback:""},
+
+      {name:"Azul Indigo", fecha:"February 2024", resumen:"Website for a small business", imagen:"/AZUL-INDIGO.png", tecno:["Javasript", "React", "Next.js", "TailwindCSS"], 
+        descripcion:[
+        "📸 Photo gallery",
+        "🗨️ Feedback section connected with Google Forms",
+        "📱 Responsive design"], deploy:"https://www.espacioazulindigo.com.ar/", repofront:"", repoback:""},
+
+      {name:"CAMPY", fecha:"January 2023", resumen:"Booking app for campings", imagen:"/HOME-CAMPY.png", tecno:["Typesript", "React", "Redux", "Material UI", "Node.js", "Express", "Sequelize", "MySQL"], 
       descripcion:["📤 Connected to Cloudinary", 
       "💰 Payment gateway",
       "🔒 Authentication",
       "📂 Complex combined filters and map",
       "📧 Mail notifications",
       "🤖 Bot assistant ",
-      "📚 Different dashboards for users",
+      "🧮 Different dashboards for users",
       "📊 Statistic section for the administrator",
       "📱 Responsive design"], deploy:"https://campy-frontend.vercel.app/", repofront:"https://github.com/VirJuarez/Campy-frontend", repoback:"https://github.com/VirJuarez/Campy-backend"},
-      {name:"FOODAPP",fecha:"November 2022", resumen:"Página de recetas para todo tipo de dietas", imagen:"/HOME-FOODAPP.png", tecno:["Javascript", "React", "Redux", "plain CSS", "Node.js", "Express", "Sequelize", "PostgreSQL"], 
+      {name:"FOODAPP",fecha:"November 2022", resumen:"Recipes App", imagen:"/HOME-FOODAPP.png", tecno:["Javascript", "React", "Redux", "plain CSS", "Node.js", "Express", "Sequelize", "PostgreSQL"], 
       descripcion:["🛬 Landing Page",
       "⏳ Loading", 
       "🔍 Search bar for recipes", 

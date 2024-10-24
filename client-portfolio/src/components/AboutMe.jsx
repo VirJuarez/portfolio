@@ -38,13 +38,13 @@ return english?(
                                Before starting in the IT sector, I got a <strong>Bachelor´s degree in Chemistry</strong>, and I worked in the research area.
                             </p>
                             <p className="animate__animated animate__zoomIn animate__delay-1s font-sans text-md my-6 tracking-width py-2  sm:text-lg rounded-full  bg-white border-teal-400 border-solid border-2 px-6 text-sm  shadow-sm">
-                              I graduated as a <strong>Full Stack Developer</strong> from Henry Bootcamp. I like to have new problems and challenges to solve daily.
+                            I am currently working as a <strong>Full Stack Developer</strong>. I like to have new problems and challenges to solve daily.
                             </p>
                             <p className="animate__animated animate__zoomIn animate__delay-2s font-sans text-md my-6 tracking-width py-2  sm:text-lg rounded-full  bg-white border-teal-400 border-solid border-2 px-6 text-sm shadow-sm">
                               Regarding my <strong>soft skills</strong>, I consider myself a reliable, dedicated, curious person who learns quickly. 
                             </p>
                             <p className="animate__animated animate__zoomIn animate__delay-3s font-sans text-md my-6 tracking-width py-2  sm:text-lg rounded-full  bg-white border-teal-400 border-solid border-2 px-6 text-sm  shadow-sm">
-                              Currently, I am looking for <strong>my first job on IT</strong>. I want a job which let me continue learning and improving my skills.
+                              Currently, I am looking to <strong>continue growing in my IT career</strong>. I want a job which let me continue learning and improving my skills.
                             </p>
                             
                             </div>
@@ -89,13 +89,13 @@ return english?(
                           Antes de entrar en el mundo de la programación, me recibí como <strong>Licenciada en Química</strong>, y me desempeñaba en el área de investigación.
                         </p>
                         <p className="animate__animated animate__zoomIn animate__delay-1s font-sans text-md my-6 tracking-width py-2  sm:text-lg rounded-full  bg-white border-teal-400 border-solid border-2 px-6 text-sm shadow-sm">
-                          Me gradué como <strong>Desarrolladora Full Stack</strong> en el Bootcamp de Henry. Me gusta tener a diario nuevos problemas y desafíos que resolver.
+                          Ahora me desempeño como <strong>Desarrolladora Full Stack</strong>. Me gusta tener a diario nuevos problemas y desafíos que resolver.
                         </p>
                         <p className="animate__animated animate__zoomIn animate__delay-2s font-sans text-md my-6 tracking-width py-2  sm:text-lg rounded-full  bg-white border-teal-400 border-solid border-2 px-6 text-sm shadow-sm">
                           En cuanto a mis <strong>habilidades blandas</strong>, me considero una persona responsable, dedicada, curiosa y que aprende rápidamente. 
                         </p>
                         <p className="animate__animated animate__zoomIn animate__delay-3s font-sans  my-6 tracking-width py-2  sm:text-lg rounded-full  bg-white border-teal-400 border-solid border-2 px-6 text-sm   shadow-sm">
-                          Actualmente, estoy buscando <strong>mi primer empleo en IT</strong>. Quiero un empleo que me permita seguir adquiriendo y perfeccionando conocimientos.
+                          Actualmente, busco <strong>seguir creciendo en mi carrera IT</strong>. Quiero un empleo que me permita seguir adquiriendo y perfeccionando conocimientos.
                         </p>
                         
                         </div>
